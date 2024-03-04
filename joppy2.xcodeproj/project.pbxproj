@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF8EA4BF2B95AEAD00DCC65E /* joppy2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4BE2B95AEAD00DCC65E /* joppy2App.swift */; };
+		FF8EA4C12B95AEAD00DCC65E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4C02B95AEAD00DCC65E /* ContentView.swift */; };
+		FF8EA4C32B95AEAF00DCC65E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8EA4C22B95AEAF00DCC65E /* Assets.xcassets */; };
+		FF8EA4C62B95AEAF00DCC65E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8EA4C52B95AEAF00DCC65E /* Preview Assets.xcassets */; };
+		FF8EA4D02B95AEAF00DCC65E /* joppy2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4CF2B95AEAF00DCC65E /* joppy2Tests.swift */; };
+		FF8EA4DA2B95AEAF00DCC65E /* joppy2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4D92B95AEAF00DCC65E /* joppy2UITests.swift */; };
+		FF8EA4DC2B95AEAF00DCC65E /* joppy2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4DB2B95AEAF00DCC65E /* joppy2UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF8EA4CC2B95AEAF00DCC65E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8EA4B32B95AEAD00DCC65E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF8EA4BA2B95AEAD00DCC65E;
+			remoteInfo = joppy2;
+		};
+		FF8EA4D62B95AEAF00DCC65E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8EA4B32B95AEAD00DCC65E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF8EA4BA2B95AEAD00DCC65E;
+			remoteInfo = joppy2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF8EA4BB2B95AEAD00DCC65E /* joppy2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joppy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8EA4BE2B95AEAD00DCC65E /* joppy2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2App.swift; sourceTree = "<group>"; };
+		FF8EA4C02B95AEAD00DCC65E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FF8EA4C22B95AEAF00DCC65E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF8EA4C52B95AEAF00DCC65E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FF8EA4CB2B95AEAF00DCC65E /* joppy2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = joppy2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8EA4CF2B95AEAF00DCC65E /* joppy2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2Tests.swift; sourceTree = "<group>"; };
+		FF8EA4D52B95AEAF00DCC65E /* joppy2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = joppy2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8EA4D92B95AEAF00DCC65E /* joppy2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2UITests.swift; sourceTree = "<group>"; };
+		FF8EA4DB2B95AEAF00DCC65E /* joppy2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF8EA4B82B95AEAD00DCC65E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8EA4C82B95AEAF00DCC65E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8EA4D22B95AEAF00DCC65E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF8EA4B22B95AEAD00DCC65E = {
+			isa = PBXGroup;
+			children = (
+				FF8EA4BD2B95AEAD00DCC65E /* joppy2 */,
+				FF8EA4CE2B95AEAF00DCC65E /* joppy2Tests */,
+				FF8EA4D82B95AEAF00DCC65E /* joppy2UITests */,
+				FF8EA4BC2B95AEAD00DCC65E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF8EA4BC2B95AEAD00DCC65E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF8EA4BB2B95AEAD00DCC65E /* joppy2.app */,
+				FF8EA4CB2B95AEAF00DCC65E /* joppy2Tests.xctest */,
+				FF8EA4D52B95AEAF00DCC65E /* joppy2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF8EA4BD2B95AEAD00DCC65E /* joppy2 */ = {
+			isa = PBXGroup;
+			children = (
+				FF8EA4BE2B95AEAD00DCC65E /* joppy2App.swift */,
+				FF8EA4C02B95AEAD00DCC65E /* ContentView.swift */,
+				FF8EA4C22B95AEAF00DCC65E /* Assets.xcassets */,
+				FF8EA4C42B95AEAF00DCC65E /* Preview Content */,
+			);
+			path = joppy2;
+			sourceTree = "<group>";
+		};
+		FF8EA4C42B95AEAF00DCC65E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FF8EA4C52B95AEAF00DCC65E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FF8EA4CE2B95AEAF00DCC65E /* joppy2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FF8EA4CF2B95AEAF00DCC65E /* joppy2Tests.swift */,
+			);
+			path = joppy2Tests;
+			sourceTree = "<group>";
+		};
+		FF8EA4D82B95AEAF00DCC65E /* joppy2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF8EA4D92B95AEAF00DCC65E /* joppy2UITests.swift */,
+				FF8EA4DB2B95AEAF00DCC65E /* joppy2UITestsLaunchTests.swift */,
+			);
+			path = joppy2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF8EA4BA2B95AEAD00DCC65E /* joppy2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF8EA4DF2B95AEAF00DCC65E /* Build configuration list for PBXNativeTarget "joppy2" */;
+			buildPhases = (
+				FF8EA4B72B95AEAD00DCC65E /* Sources */,
+				FF8EA4B82B95AEAD00DCC65E /* Frameworks */,
+				FF8EA4B92B95AEAD00DCC65E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = joppy2;
+			productName = joppy2;
+			productReference = FF8EA4BB2B95AEAD00DCC65E /* joppy2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF8EA4CA2B95AEAF00DCC65E /* joppy2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF8EA4E22B95AEAF00DCC65E /* Build configuration list for PBXNativeTarget "joppy2Tests" */;
+			buildPhases = (
+				FF8EA4C72B95AEAF00DCC65E /* Sources */,
+				FF8EA4C82B95AEAF00DCC65E /* Frameworks */,
+				FF8EA4C92B95AEAF00DCC65E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF8EA4CD2B95AEAF00DCC65E /* PBXTargetDependency */,
+			);
+			name = joppy2Tests;
+			productName = joppy2Tests;
+			productReference = FF8EA4CB2B95AEAF00DCC65E /* joppy2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF8EA4D42B95AEAF00DCC65E /* joppy2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF8EA4E52B95AEAF00DCC65E /* Build configuration list for PBXNativeTarget "joppy2UITests" */;
+			buildPhases = (
+				FF8EA4D12B95AEAF00DCC65E /* Sources */,
+				FF8EA4D22B95AEAF00DCC65E /* Frameworks */,
+				FF8EA4D32B95AEAF00DCC65E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF8EA4D72B95AEAF00DCC65E /* PBXTargetDependency */,
+			);
+			name = joppy2UITests;
+			productName = joppy2UITests;
+			productReference = FF8EA4D52B95AEAF00DCC65E /* joppy2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF8EA4B32B95AEAD00DCC65E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					FF8EA4BA2B95AEAD00DCC65E = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					FF8EA4CA2B95AEAF00DCC65E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = FF8EA4BA2B95AEAD00DCC65E;
+					};
+					FF8EA4D42B95AEAF00DCC65E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = FF8EA4BA2B95AEAD00DCC65E;
+					};
+				};
+			};
+			buildConfigurationList = FF8EA4B62B95AEAD00DCC65E /* Build configuration list for PBXProject "joppy2" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF8EA4B22B95AEAD00DCC65E;
+			productRefGroup = FF8EA4BC2B95AEAD00DCC65E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF8EA4BA2B95AEAD00DCC65E /* joppy2 */,
+				FF8EA4CA2B95AEAF00DCC65E /* joppy2Tests */,
+				FF8EA4D42B95AEAF00DCC65E /* joppy2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF8EA4B92B95AEAD00DCC65E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF8EA4C62B95AEAF00DCC65E /* Preview Assets.xcassets in Resources */,
+				FF8EA4C32B95AEAF00DCC65E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8EA4C92B95AEAF00DCC65E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8EA4D32B95AEAF00DCC65E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF8EA4B72B95AEAD00DCC65E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF8EA4C12B95AEAD00DCC65E /* ContentView.swift in Sources */,
+				FF8EA4BF2B95AEAD00DCC65E /* joppy2App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8EA4C72B95AEAF00DCC65E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF8EA4D02B95AEAF00DCC65E /* joppy2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8EA4D12B95AEAF00DCC65E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF8EA4DC2B95AEAF00DCC65E /* joppy2UITestsLaunchTests.swift in Sources */,
+				FF8EA4DA2B95AEAF00DCC65E /* joppy2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF8EA4CD2B95AEAF00DCC65E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF8EA4BA2B95AEAD00DCC65E /* joppy2 */;
+			targetProxy = FF8EA4CC2B95AEAF00DCC65E /* PBXContainerItemProxy */;
+		};
+		FF8EA4D72B95AEAF00DCC65E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF8EA4BA2B95AEAD00DCC65E /* joppy2 */;
+			targetProxy = FF8EA4D62B95AEAF00DCC65E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FF8EA4DD2B95AEAF00DCC65E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF8EA4DE2B95AEAF00DCC65E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF8EA4E02B95AEAF00DCC65E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"joppy2/Preview Content\"";
+				DEVELOPMENT_TEAM = 37BC8RS2XN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Chanchrons.joppy2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF8EA4E12B95AEAF00DCC65E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"joppy2/Preview Content\"";
+				DEVELOPMENT_TEAM = 37BC8RS2XN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Chanchrons.joppy2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FF8EA4E32B95AEAF00DCC65E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37BC8RS2XN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Chanchrons.joppy2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/joppy2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/joppy2";
+			};
+			name = Debug;
+		};
+		FF8EA4E42B95AEAF00DCC65E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37BC8RS2XN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Chanchrons.joppy2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/joppy2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/joppy2";
+			};
+			name = Release;
+		};
+		FF8EA4E62B95AEAF00DCC65E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37BC8RS2XN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Chanchrons.joppy2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = joppy2;
+			};
+			name = Debug;
+		};
+		FF8EA4E72B95AEAF00DCC65E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37BC8RS2XN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Chanchrons.joppy2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = joppy2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF8EA4B62B95AEAD00DCC65E /* Build configuration list for PBXProject "joppy2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8EA4DD2B95AEAF00DCC65E /* Debug */,
+				FF8EA4DE2B95AEAF00DCC65E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF8EA4DF2B95AEAF00DCC65E /* Build configuration list for PBXNativeTarget "joppy2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8EA4E02B95AEAF00DCC65E /* Debug */,
+				FF8EA4E12B95AEAF00DCC65E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF8EA4E22B95AEAF00DCC65E /* Build configuration list for PBXNativeTarget "joppy2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8EA4E32B95AEAF00DCC65E /* Debug */,
+				FF8EA4E42B95AEAF00DCC65E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF8EA4E52B95AEAF00DCC65E /* Build configuration list for PBXNativeTarget "joppy2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8EA4E62B95AEAF00DCC65E /* Debug */,
+				FF8EA4E72B95AEAF00DCC65E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF8EA4B32B95AEAD00DCC65E /* Project object */;
+}
