@@ -14,6 +14,7 @@
 		FF8EA4D02B95AEAF00DCC65E /* joppy2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4CF2B95AEAF00DCC65E /* joppy2Tests.swift */; };
 		FF8EA4DA2B95AEAF00DCC65E /* joppy2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4D92B95AEAF00DCC65E /* joppy2UITests.swift */; };
 		FF8EA4DC2B95AEAF00DCC65E /* joppy2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4DB2B95AEAF00DCC65E /* joppy2UITestsLaunchTests.swift */; };
+		FF8EA4E92B95AFE800DCC65E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FF8EA4E82B95AFE800DCC65E /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		FF8EA4D52B95AEAF00DCC65E /* joppy2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = joppy2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8EA4D92B95AEAF00DCC65E /* joppy2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2UITests.swift; sourceTree = "<group>"; };
 		FF8EA4DB2B95AEAF00DCC65E /* joppy2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FF8EA4E82B95AFE800DCC65E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		FF8EA4B22B95AEAD00DCC65E = {
 			isa = PBXGroup;
 			children = (
+				FF8EA4E82B95AFE800DCC65E /* .gitignore */,
 				FF8EA4BD2B95AEAD00DCC65E /* joppy2 */,
 				FF8EA4CE2B95AEAF00DCC65E /* joppy2Tests */,
 				FF8EA4D82B95AEAF00DCC65E /* joppy2UITests */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF8EA4C62B95AEAF00DCC65E /* Preview Assets.xcassets in Resources */,
+				FF8EA4E92B95AFE800DCC65E /* .gitignore in Resources */,
 				FF8EA4C32B95AEAF00DCC65E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
