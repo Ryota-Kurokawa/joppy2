@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF8532E42B978D180080AD46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF8532E32B978D180080AD46 /* GoogleService-Info.plist */; };
+		FF8532ED2B9AE5AA0080AD46 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8532EC2B9AE5AA0080AD46 /* ProfileScreen.swift */; };
+		FF8532F02B9AE71F0080AD46 /* UseCouponScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8532EF2B9AE71F0080AD46 /* UseCouponScreen.swift */; };
+		FF8532F32B9AE9220080AD46 /* EventScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8532F22B9AE9220080AD46 /* EventScreen.swift */; };
+		FF8532F62B9AEA9A0080AD46 /* WriteArticleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8532F52B9AEA9A0080AD46 /* WriteArticleScreen.swift */; };
+		FF8532FD2B9B11960080AD46 /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = FF8532F92B9B11960080AD46 /* .swift-version */; };
+		FF8532FE2B9B11960080AD46 /* project.yml in Resources */ = {isa = PBXBuildFile; fileRef = FF8532FA2B9B11960080AD46 /* project.yml */; };
+		FF8532FF2B9B11960080AD46 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FF8532FB2B9B11960080AD46 /* .swiftlint.yml */; };
+		FF8533022B9B59740080AD46 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8533012B9B59740080AD46 /* AuthViewModel.swift */; };
+		FF8533052B9B5C480080AD46 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8533042B9B5C480080AD46 /* LoginController.swift */; };
+		FF8533072B9B5C560080AD46 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8533062B9B5C550080AD46 /* SignupController.swift */; };
+		FF85330A2B9B5C920080AD46 /* AuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8533092B9B5C920080AD46 /* AuthProtocol.swift */; };
+		FF85330E2B9BF32A0080AD46 /* ProfileCreateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85330D2B9BF32A0080AD46 /* ProfileCreateScreen.swift */; };
 		FF8EA4BF2B95AEAD00DCC65E /* joppy2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4BE2B95AEAD00DCC65E /* joppy2App.swift */; };
 		FF8EA4C32B95AEAF00DCC65E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8EA4C22B95AEAF00DCC65E /* Assets.xcassets */; };
 		FF8EA4C62B95AEAF00DCC65E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8EA4C52B95AEAF00DCC65E /* Preview Assets.xcassets */; };
@@ -20,10 +33,12 @@
 		FF8EA4FC2B97833C00DCC65E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4FB2B97833C00DCC65E /* HomeScreen.swift */; };
 		FF8EA4FE2B97845200DCC65E /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4FD2B97845200DCC65E /* LoginScreen.swift */; };
 		FF8EA5002B97846100DCC65E /* SignupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA4FF2B97846100DCC65E /* SignupScreen.swift */; };
-		FF8EA5022B9785B900DCC65E /* Firebase GoogleService-.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF8EA5012B9785B900DCC65E /* Firebase GoogleService-.plist */; };
 		FF8EA5052B97861600DCC65E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FF8EA5042B97861600DCC65E /* FirebaseAnalytics */; };
 		FF8EA5072B97861600DCC65E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FF8EA5062B97861600DCC65E /* FirebaseAuth */; };
 		FF8EA5092B97861600DCC65E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FF8EA5082B97861600DCC65E /* FirebaseFirestore */; };
+		FFB2EEB22B9D680D0073786D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FFB2EEB12B9D680D0073786D /* FirebaseFirestoreSwift */; };
+		FFB2EEB52B9D93550073786D /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB2EEB42B9D93550073786D /* Haptics.swift */; };
+		FFB2EEB82B9DA5A20073786D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB2EEB72B9DA5A20073786D /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +59,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF8532E32B978D180080AD46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF8532EC2B9AE5AA0080AD46 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		FF8532EF2B9AE71F0080AD46 /* UseCouponScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCouponScreen.swift; sourceTree = "<group>"; };
+		FF8532F22B9AE9220080AD46 /* EventScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScreen.swift; sourceTree = "<group>"; };
+		FF8532F52B9AEA9A0080AD46 /* WriteArticleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteArticleScreen.swift; sourceTree = "<group>"; };
+		FF8532F92B9B11960080AD46 /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		FF8532FA2B9B11960080AD46 /* project.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = project.yml; sourceTree = "<group>"; };
+		FF8532FB2B9B11960080AD46 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		FF8533012B9B59740080AD46 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		FF8533042B9B5C480080AD46 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		FF8533062B9B5C550080AD46 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		FF8533092B9B5C920080AD46 /* AuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
+		FF85330D2B9BF32A0080AD46 /* ProfileCreateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreateScreen.swift; sourceTree = "<group>"; };
 		FF8EA4BB2B95AEAD00DCC65E /* joppy2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joppy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8EA4BE2B95AEAD00DCC65E /* joppy2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2App.swift; sourceTree = "<group>"; };
 		FF8EA4C22B95AEAF00DCC65E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +88,8 @@
 		FF8EA4FB2B97833C00DCC65E /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		FF8EA4FD2B97845200DCC65E /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		FF8EA4FF2B97846100DCC65E /* SignupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreen.swift; sourceTree = "<group>"; };
-		FF8EA5012B9785B900DCC65E /* Firebase GoogleService-.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Firebase GoogleService-.plist"; sourceTree = "<group>"; };
+		FFB2EEB42B9D93550073786D /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		FFB2EEB72B9DA5A20073786D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +100,7 @@
 				FF8EA5052B97861600DCC65E /* FirebaseAnalytics in Frameworks */,
 				FF8EA5072B97861600DCC65E /* FirebaseAuth in Frameworks */,
 				FF8EA5092B97861600DCC65E /* FirebaseFirestore in Frameworks */,
+				FFB2EEB22B9D680D0073786D /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,14 +121,106 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF8532E52B9AE0360080AD46 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FF8EA4FB2B97833C00DCC65E /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FF8532E62B9AE0430080AD46 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FF8EA4FD2B97845200DCC65E /* LoginScreen.swift */,
+				FF8533042B9B5C480080AD46 /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FF8532E72B9AE04F0080AD46 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				FF8EA4FF2B97846100DCC65E /* SignupScreen.swift */,
+				FF8533062B9B5C550080AD46 /* SignupController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		FF8532E92B9AE5720080AD46 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FF8532EC2B9AE5AA0080AD46 /* ProfileScreen.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FF8532EE2B9AE6F20080AD46 /* UseCoupon */ = {
+			isa = PBXGroup;
+			children = (
+				FF8532EF2B9AE71F0080AD46 /* UseCouponScreen.swift */,
+			);
+			path = UseCoupon;
+			sourceTree = "<group>";
+		};
+		FF8532F12B9AE90D0080AD46 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				FF8532F22B9AE9220080AD46 /* EventScreen.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		FF8532F42B9AEA7F0080AD46 /* WriteArticle */ = {
+			isa = PBXGroup;
+			children = (
+				FF8532F52B9AEA9A0080AD46 /* WriteArticleScreen.swift */,
+			);
+			path = WriteArticle;
+			sourceTree = "<group>";
+		};
+		FF8533032B9B59C40080AD46 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FF8533082B9B5C7B0080AD46 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FF8533092B9B5C920080AD46 /* AuthProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FF85330C2B9BF3170080AD46 /* ProfileCreate */ = {
+			isa = PBXGroup;
+			children = (
+				FF85330D2B9BF32A0080AD46 /* ProfileCreateScreen.swift */,
+			);
+			path = ProfileCreate;
+			sourceTree = "<group>";
+		};
+		FF85330F2B9C39780080AD46 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		FF8EA4B22B95AEAD00DCC65E = {
 			isa = PBXGroup;
 			children = (
 				FF8EA4E82B95AFE800DCC65E /* .gitignore */,
+				FF8532F92B9B11960080AD46 /* .swift-version */,
+				FF8532FB2B9B11960080AD46 /* .swiftlint.yml */,
+				FF8532FA2B9B11960080AD46 /* project.yml */,
 				FF8EA4BD2B95AEAD00DCC65E /* joppy2 */,
 				FF8EA4CE2B95AEAF00DCC65E /* joppy2Tests */,
 				FF8EA4D82B95AEAF00DCC65E /* joppy2UITests */,
 				FF8EA4BC2B95AEAD00DCC65E /* Products */,
+				FFB2EEB02B9D680D0073786D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +237,8 @@
 		FF8EA4BD2B95AEAD00DCC65E /* joppy2 */ = {
 			isa = PBXGroup;
 			children = (
+				FF85330F2B9C39780080AD46 /* Service */,
+				FF8533082B9B5C7B0080AD46 /* Protocol */,
 				FF8EA4F32B977C6900DCC65E /* Domain */,
 				FF8EA4F22B977C5800DCC65E /* Data */,
 				FF8EA4F12B977C4D00DCC65E /* Content */,
@@ -122,8 +246,8 @@
 				FF8EA4EF2B977BDD00DCC65E /* ViewModel */,
 				FF8EA4EE2B977BCE00DCC65E /* Model */,
 				FF8EA4BE2B95AEAD00DCC65E /* joppy2App.swift */,
+				FF8532E32B978D180080AD46 /* GoogleService-Info.plist */,
 				FF8EA4C22B95AEAF00DCC65E /* Assets.xcassets */,
-				FF8EA5012B9785B900DCC65E /* Firebase GoogleService-.plist */,
 				FF8EA4C42B95AEAF00DCC65E /* Preview Content */,
 			);
 			path = joppy2;
@@ -167,6 +291,7 @@
 		FF8EA4EF2B977BDD00DCC65E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FF8533012B9B59740080AD46 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -174,9 +299,16 @@
 		FF8EA4F02B977BE800DCC65E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FF8EA4FB2B97833C00DCC65E /* HomeScreen.swift */,
-				FF8EA4FD2B97845200DCC65E /* LoginScreen.swift */,
-				FF8EA4FF2B97846100DCC65E /* SignupScreen.swift */,
+				FFB2EEB62B9DA5860073786D /* Component */,
+				FFB2EEB32B9D92E50073786D /* Modifire */,
+				FF85330C2B9BF3170080AD46 /* ProfileCreate */,
+				FF8532F42B9AEA7F0080AD46 /* WriteArticle */,
+				FF8532F12B9AE90D0080AD46 /* Event */,
+				FF8532EE2B9AE6F20080AD46 /* UseCoupon */,
+				FF8532E92B9AE5720080AD46 /* Profile */,
+				FF8532E72B9AE04F0080AD46 /* SignUp */,
+				FF8532E62B9AE0430080AD46 /* Login */,
+				FF8532E52B9AE0360080AD46 /* Home */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -198,8 +330,32 @@
 		FF8EA4F32B977C6900DCC65E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FF8533032B9B59C40080AD46 /* Repository */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		FFB2EEB02B9D680D0073786D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFB2EEB32B9D92E50073786D /* Modifire */ = {
+			isa = PBXGroup;
+			children = (
+				FFB2EEB42B9D93550073786D /* Haptics.swift */,
+			);
+			path = Modifire;
+			sourceTree = "<group>";
+		};
+		FFB2EEB62B9DA5860073786D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				FFB2EEB72B9DA5A20073786D /* CustomButton.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +378,7 @@
 				FF8EA5042B97861600DCC65E /* FirebaseAnalytics */,
 				FF8EA5062B97861600DCC65E /* FirebaseAuth */,
 				FF8EA5082B97861600DCC65E /* FirebaseFirestore */,
+				FFB2EEB12B9D680D0073786D /* FirebaseFirestoreSwift */,
 			);
 			productName = joppy2;
 			productReference = FF8EA4BB2B95AEAD00DCC65E /* joppy2.app */;
@@ -314,10 +471,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8532E42B978D180080AD46 /* GoogleService-Info.plist in Resources */,
 				FF8EA4C62B95AEAF00DCC65E /* Preview Assets.xcassets in Resources */,
 				FF8EA4E92B95AFE800DCC65E /* .gitignore in Resources */,
+				FF8532FF2B9B11960080AD46 /* .swiftlint.yml in Resources */,
 				FF8EA4C32B95AEAF00DCC65E /* Assets.xcassets in Resources */,
-				FF8EA5022B9785B900DCC65E /* Firebase GoogleService-.plist in Resources */,
+				FF8532FE2B9B11960080AD46 /* project.yml in Resources */,
+				FF8532FD2B9B11960080AD46 /* .swift-version in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,13 +502,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB2EEB52B9D93550073786D /* Haptics.swift in Sources */,
+				FF8532F62B9AEA9A0080AD46 /* WriteArticleScreen.swift in Sources */,
+				FFB2EEB82B9DA5A20073786D /* CustomButton.swift in Sources */,
+				FF85330A2B9B5C920080AD46 /* AuthProtocol.swift in Sources */,
+				FF8532F32B9AE9220080AD46 /* EventScreen.swift in Sources */,
 				FF8EA4FA2B977E8B00DCC65E /* Publisher.swift in Sources */,
+				FF8533052B9B5C480080AD46 /* LoginController.swift in Sources */,
 				FF8EA4FC2B97833C00DCC65E /* HomeScreen.swift in Sources */,
 				FF8EA5002B97846100DCC65E /* SignupScreen.swift in Sources */,
+				FF8532F02B9AE71F0080AD46 /* UseCouponScreen.swift in Sources */,
 				FF8EA4F72B977DE600DCC65E /* Coupon.swift in Sources */,
+				FF85330E2B9BF32A0080AD46 /* ProfileCreateScreen.swift in Sources */,
 				FF8EA4F52B977C8500DCC65E /* UserInfo.swift in Sources */,
+				FF8533072B9B5C560080AD46 /* SignupController.swift in Sources */,
+				FF8533022B9B59740080AD46 /* AuthViewModel.swift in Sources */,
 				FF8EA4BF2B95AEAD00DCC65E /* joppy2App.swift in Sources */,
 				FF8EA4FE2B97845200DCC65E /* LoginScreen.swift in Sources */,
+				FF8532ED2B9AE5AA0080AD46 /* ProfileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +876,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF8EA5032B97861600DCC65E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		FFB2EEB12B9D680D0073786D /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF8EA5032B97861600DCC65E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
