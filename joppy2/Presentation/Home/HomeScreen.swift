@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeScreen: View {
     var body: some View {
         TabView {
-            EventScreen()
+            Text("home")
                 .tabItem {
                     Image(systemName: "balloon")
                     Text("Event")
@@ -30,7 +30,7 @@ struct HomeScreen: View {
                     Image(systemName: "person.fill")
                     Text("Profile")
                 }
-        }.navigationBarBackButtonHidden(true)
+        }/*.navigationBarBackButtonHidden(true)*/
     }
 }
 
