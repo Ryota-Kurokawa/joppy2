@@ -1,0 +1,28 @@
+# Lint 対象を指定
+included:
+    - Shaker/
+# Lint 対象から除外する
+excluded:
+    - ShakerTests/
+    - ShakerUITests/
+# 無効にするルール
+disabled_rules:
+    - file_length
+    - trailing_comma
+    - trailing_whitespace
+    - trailing_newline
+    - vertical_whitespace
+    - function_body_length
+    - type_body_length
+    - line_length
+    - vertical_parameter_alignment
+
+# ここでは変数名の最低の長さを 1 に指定
+identifier_name:
+    min_length: 1
+type_name:
+    excluded:
+      - lowerCamelClass
+
+
+
