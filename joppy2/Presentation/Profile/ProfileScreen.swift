@@ -29,20 +29,17 @@ struct ProfileScreen: View {
                     .padding(.vertical, 40)
                 Picker("TextFieldStyle", selection: $profileFieldTypes) {
                     Text("個人").tag(ProfileFieldTypes.individual)
-                    Text("会社").tag(ProfileFieldTypes.organization)
+                    Text("organization").tag(ProfileFieldTypes.organization)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
                 VStack {
-                    switch profileFieldTypes {
+                    switch profileFieldTypes
+                    {
                     case .individual:
-                        ScrollView {
-                            Text("黒川良太")
-                        }
+                        PersonalScreen()
                     case .organization:
-                        ScrollView {
-                            Text("algoria inc.")
-                        }
+                        OrganizationScreen()
                     }
                 }
                 .animation(.easeInOut, value: profileFieldTypes)

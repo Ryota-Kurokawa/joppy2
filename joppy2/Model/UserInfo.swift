@@ -8,7 +8,7 @@
 import Foundation
 
 struct UserInfo: Codable, Identifiable {
-    var id: UUID = UUID()
+    let id: String
     let name: String
-    let havingCouponIds: [Coupon]
+    var havingCouponIds: [Coupon.ID]
 }

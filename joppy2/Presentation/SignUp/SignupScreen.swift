@@ -71,6 +71,7 @@ struct SignUpScreen: View {
                 .fullScreenCover(isPresented: $isPresented) {
                     HomeScreen()
                 }
+                Spacer()
             }
         }
     }
