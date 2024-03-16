@@ -36,13 +36,17 @@ struct EventScreen: View {
                 VStack {
                     switch eventFieldTypes {
                     case .toC:
-                        ScrollView {
-                            Text("to c")
-                        }
+                        //参加用画面、カードで並べる
+                        Text("aa")
+//                        ScrollView {
+//                            Text("to c")
+//                        }
+                        //開催用画面
                     case .toB:
-                        ScrollView {
-                            Text("to b")
-                        }
+                        Text("aa")
+//                        ScrollView {
+//                            Text("to b")
+//                        }
                     }
                 }
                 .animation(.easeInOut, value: eventFieldTypes)
