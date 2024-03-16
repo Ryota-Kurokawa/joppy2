@@ -15,16 +15,20 @@ struct HeldScreen: View {
 
 
 struct EventCellView: View {
+    let title: String
+    let description: String
+    let timeStamp: String
     var body: some View {
         VStack {
             VStack {
-                Text("Chipaton ADCチームキックオフ")
+                Text(title)
                     .font(.system(size: 23))
                     .fontWeight(.bold)
                     .padding(.all)
+                Text(description)
                 Spacer()
                 HStack {
-                    Text("2024/2/2 14:00")
+                    Text(timeStamp)
                         .font(.system(size: 20))
                         .fontWeight(.semibold)
                         .frame(width: 200, height: 50)
@@ -47,5 +51,5 @@ struct EventCellView: View {
 
 
 #Preview {
-    HeldScreen()
+    EventCellView(title: "Chipaton ADCチームキックオフ", description: "マンチカン", timeStamp: "2024/2/2")
 }
