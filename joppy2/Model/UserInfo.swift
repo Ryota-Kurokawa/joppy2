@@ -8,13 +8,7 @@
 import Foundation
 
 struct UserInfo: Codable, Identifiable {
-<<<<<<< HEAD
-    var id: UUID = UUID()
-    let name: String
-    let havingCouponIds: [Coupon]
-=======
     let id: String
     let name: String
-    var havingCouponIds: [Coupon.ID]
->>>>>>> dev
+    let discription: String
 }

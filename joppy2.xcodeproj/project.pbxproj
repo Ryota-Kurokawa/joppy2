@@ -29,11 +29,11 @@
 		8FAED91D0946135B4E760193 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9C11B57329EAFCE726660 /* ProfileController.swift */; };
 		9074F3A6D2AFAA3B8D0484AC /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4548B3A3883EDE9A363813D4 /* HomeScreen.swift */; };
 		94A62526A60F5EE426ECA24D /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382F94E4DFC114C37CEC7EC1 /* LoginScreen.swift */; };
-		9A4131CC364546E903618FF1 /* SignupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E8EF20EDB2325B770DABB /* SignupScreen.swift */; };
+		9A4131CC364546E903618FF1 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E8EF20EDB2325B770DABB /* SignUpScreen.swift */; };
 		AB9C1B827B2422AEE93CC4CC /* project.yml in Resources */ = {isa = PBXBuildFile; fileRef = A23BADF6082DDBB13D2415D8 /* project.yml */; };
 		B969A0FCF7EFDC4F8BB6256C /* joppy2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B8B5867A53C634BF8598ED /* joppy2App.swift */; };
 		DEF44B7CCEF1A4BDB1E635DB /* EventScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26A45379FD7B14E3687E52 /* EventScreen.swift */; };
-		E19F954570A20F4F2995C371 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281EB51DB7C3D9DBCC95751 /* SignupController.swift */; };
+		E19F954570A20F4F2995C371 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281EB51DB7C3D9DBCC95751 /* SignUpController.swift */; };
 		E5F0A8B776B9A8567AC89B6B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCA26E1FF477CB97714D019 /* UserInfo.swift */; };
 		EB711D41776EEA2A0A3A3B7F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C50136A3CB12261ED16664 /* CustomButton.swift */; };
 		EC602ED3533F0E8C63A1613E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 524666B4ACC20C5D53E09572 /* .swiftlint.yml */; };
@@ -53,7 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0281EB51DB7C3D9DBCC95751 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		0281EB51DB7C3D9DBCC95751 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		0CA9C11B57329EAFCE726660 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		10FF7D202A42A33200331063 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		163C005F06A48579DD40D872 /* ProfileCreateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreateScreen.swift; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		28B8B5867A53C634BF8598ED /* joppy2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2App.swift; sourceTree = "<group>"; };
 		35AF7A000DBFD121CB9569A7 /* joppy2UITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = joppy2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		382F94E4DFC114C37CEC7EC1 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
-		399E8EF20EDB2325B770DABB /* SignupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreen.swift; sourceTree = "<group>"; };
+		399E8EF20EDB2325B770DABB /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		439D8E71250128A00D98482A /* OrganizationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationScreen.swift; sourceTree = "<group>"; };
 		4548B3A3883EDE9A363813D4 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		4DC5FD3187CC4740194668CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		647E97777F216FE4388A49B6 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		652732CF594935526D307940 /* AuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
 		6DCA26E1FF477CB97714D019 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		6F3E2F14C2A2BE154A9F5AED /* joppy2.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = joppy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F3E2F14C2A2BE154A9F5AED /* joppy2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joppy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7307E4A8F165A20AEB8C645E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		83BD4BB6DDBA81C0F201698F /* joppy2Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = joppy2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EB9588D0FB978C7F325432 /* UseCouponScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCouponScreen.swift; sourceTree = "<group>"; };
@@ -235,8 +235,8 @@
 		B85E630691845F3BD75BE898 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				0281EB51DB7C3D9DBCC95751 /* SignupController.swift */,
-				399E8EF20EDB2325B770DABB /* SignupScreen.swift */,
+				0281EB51DB7C3D9DBCC95751 /* SignUpController.swift */,
+				399E8EF20EDB2325B770DABB /* SignUpScreen.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -359,9 +359,6 @@
 					520B19E90182239B6BB036C6 = {
 						TestTargetID = 825C71BF811C5060C112B128;
 					};
-					825C71BF811C5060C112B128 = {
-						DevelopmentTeam = chanchrons;
-					};
 				};
 			};
 			buildConfigurationList = F1A35EF6BD588F89191BD774 /* Build configuration list for PBXProject "joppy2" */;
@@ -421,8 +418,8 @@
 				ED5C81022B4B497AB47A0EED /* ProfileCreateScreen.swift in Sources */,
 				24C8A27A9C3B7614E84859BB /* ProfileScreen.swift in Sources */,
 				0B19546A334EA74545720688 /* Publisher.swift in Sources */,
-				E19F954570A20F4F2995C371 /* SignupController.swift in Sources */,
-				9A4131CC364546E903618FF1 /* SignupScreen.swift in Sources */,
+				E19F954570A20F4F2995C371 /* SignUpController.swift in Sources */,
+				9A4131CC364546E903618FF1 /* SignUpScreen.swift in Sources */,
 				5C862D9D8226E30E9809F25C /* UseCouponScreen.swift in Sources */,
 				E5F0A8B776B9A8567AC89B6B /* UserInfo.swift in Sources */,
 				027438863A460154E4E119A3 /* WriteArticleScreen.swift in Sources */,
@@ -536,7 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = chanchrons;
+				DEVELOPMENT_TEAM = 37BC8RS2XN;
 				INFOPLIST_FILE = joppy2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -549,7 +546,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = joppy2.joppy2;
+				PRODUCT_BUNDLE_IDENTIFIER = Chanchrons.joppy2;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -655,7 +652,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = chanchrons;
+				DEVELOPMENT_TEAM = 37BC8RS2XN;
 				INFOPLIST_FILE = joppy2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -668,7 +665,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = joppy2.joppy2;
+				PRODUCT_BUNDLE_IDENTIFIER = Chanchrons.joppy2;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

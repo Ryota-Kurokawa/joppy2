@@ -11,15 +11,16 @@ import FirebaseAuth
 
 struct ProfileCreateScreen: View {
     private let user = Auth.auth().currentUser!
+    @State private var name = ""
+    @State private var discription = ""
+    @State private var isCreateProfile = false
+    @State private var isShowAlert = false
+    let db = Firestore.firestore()
+    let controller = ProfileController()
     
-    init() {
-        let db = Firestore.firestore()
-        let userInfo = UserInfo(id: user.uid, name: "name", havingCouponIds: [])
-        do {
-            try db.collection("users").document(user.uid).setData(from: userInfo)
-        } catch {
-            print("Error writing user to Firestore: \(error)")
-        }
+    init(name: String = "", discription: String = "") {
+        self.name = name
+        self.discription = discription
     }
     var body: some View {
         NavigationStack {
@@ -36,33 +37,28 @@ struct ProfileCreateScreen: View {
                     Spacer()
                 }
                 .padding(.horizontal)
-                TextField("type your name", text: .constant(""))
+                TextField("type your name", text: $name)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
                 Spacer()
                     .frame(height: 80)
                 HStack {
-                    Text("email")
+                    Text("discription")
                     Spacer()
                 }
                 .padding(.horizontal)
-                TextField("type your email", text: .constant(""))
+                TextField("About You", text: $discription)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
                 Spacer()
                     .frame(height: 80)
-                HStack {
-                    Text("password")
-                    Spacer()
-                }.padding(.horizontal)
-                TextField("type your password", text: .constant(""))
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal)
-                Spacer()
-                    .frame(height: 120)
                 Button(action:  {
                     Task {
-//                        await ProfileController().updateProfile(id:user.uid,name:db.collection("userInfo"),havingCouponIds:[])
+                        if controller.updateProfile(userInfo: UserInfo(id: user.uid, name: name, discription: discription)) {
+                            isCreateProfile.toggle()
+                        } else {
+                            isShowAlert.toggle()
+                        }
                     }
                 }) {
                     Text("Create Profile")
@@ -70,6 +66,12 @@ struct ProfileCreateScreen: View {
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(10)
+                }
+                .fullScreenCover(isPresented: $isCreateProfile) {
+                    HomeScreen()
+                }
+                .alert(isPresented: $isShowAlert) {
+                    Alert(title: Text("Error"), message: Text("Failed to create profile"), dismissButton: .default(Text("OK")))
                 }
             }
         }

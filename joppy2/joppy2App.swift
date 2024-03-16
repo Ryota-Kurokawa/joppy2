@@ -22,11 +22,7 @@ struct joppy2App: App {
     
     var body: some Scene {
         WindowGroup {
-<<<<<<< HEAD
-            SignupScreen()
-=======
             LoginScreen()
->>>>>>> dev
         }
     }
 }
