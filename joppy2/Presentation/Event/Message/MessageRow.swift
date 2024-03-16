@@ -10,7 +10,6 @@ import SwiftUI
 struct MessageRow: View {
     let message: String
     let isMyMessage: Bool
-    let user: String
     let date: Date
 
     var body: some View {
@@ -24,7 +23,7 @@ struct MessageRow: View {
                         .background(Color.red)
                         .cornerRadius(6)
                         .foregroundColor(Color.white)
-                    Text(self.formattedDate(date: date))
+                    Text("seil.formattedDataらしい\(self.formattedDate(date: date))")
                         .font(.callout)
                 }
             } else {
@@ -36,7 +35,6 @@ struct MessageRow: View {
                         .foregroundColor(Color.white)
 
                     HStack {
-                        Text(user)
 
                         Text(self.formattedDate(date: date))
                             .font(.callout)

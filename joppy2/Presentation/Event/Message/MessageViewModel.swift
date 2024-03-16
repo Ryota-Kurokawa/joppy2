@@ -49,9 +49,9 @@ import FirebaseFirestore
         lister?.remove()
     }
 
-    func addMessage(message: String , name: String) {
+    func addMessage(message: String) {
         do {
-            let message = MessageElement(name: name, message: message, createAt: Date())
+            let message = MessageElement(message: message, createAt: Date())
             let db = Firestore.firestore()
             try db.collection(collectionName).addDocument(from: message) { error in
                 if let error = error {

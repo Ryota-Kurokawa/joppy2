@@ -37,16 +37,11 @@ struct EventScreen: View {
                     switch eventFieldTypes {
                     case .toC:
                         //参加用画面、カードで並べる
-                        Text("aa")
-//                        ScrollView {
-//                            Text("to c")
-//                        }
-                        //開催用画面
+                        Text("参加したい")
+                        ArticleListView()
                     case .toB:
-                        Text("aa")
-//                        ScrollView {
-//                            Text("to b")
-//                        }
+                        Text("開催したい")
+                        HeldScreen()
                     }
                 }
                 .animation(.easeInOut, value: eventFieldTypes)

@@ -8,23 +8,14 @@
 import SwiftUI
 
 struct MessageView: View {
-    let name: String
-
     private var messageVM = MessageViewModel()
     @State private var typeMessage = ""
 
-    init(name: String) {
-        self.name = name
-    }
 
     var body: some View {
         VStack {
             List(messageVM.messages, id: \.id) {message in
-                if message.name == name {
-                    MessageRow(message: message.message, isMyMessage: true, user:message.name, date: message.createAt)
-                } else {
-                    MessageRow(message: message.message, isMyMessage: false, user:message.name, date: message.createAt)
-                }
+                MessageRow(message: message.message, isMyMessage: true, date: message.createAt)
             }
             .navigationBarTitle("Chats", displayMode: .inline)
             HStack {
@@ -32,7 +23,7 @@ struct MessageView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
 
                 Button {
-                    messageVM.addMessage(message: typeMessage, name: name)
+                    messageVM.addMessage(message: typeMessage)
                     typeMessage = ""
                 } label: {
                     Image(systemName: "arrow.up.circle.fill")
