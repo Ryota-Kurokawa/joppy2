@@ -1,10 +1,10 @@
 # Lint 対象を指定
 included:
-    - Shaker/
+    - joppy2/
 # Lint 対象から除外する
 excluded:
-    - ShakerTests/
-    - ShakerUITests/
+    - joppy2Tests/
+    - joppy2UITests/
 # 無効にするルール
 disabled_rules:
     - file_length
@@ -23,6 +23,3 @@ identifier_name:
 type_name:
     excluded:
       - lowerCamelClass
-
-
-

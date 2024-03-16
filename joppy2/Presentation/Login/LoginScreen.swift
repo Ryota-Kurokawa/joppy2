@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct LoginScreen: View {
+<<<<<<< HEAD
+=======
+    @State var isPresented = false
+    @State var isAlertShown = false
+    @State var logInEmail = ""
+    @State var logInPassword = ""
+    let controller = LoginController()
+>>>>>>> dev
     var body: some View {
         NavigationStack {
             VStack {
@@ -17,6 +25,7 @@ struct LoginScreen: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 Spacer()
+<<<<<<< HEAD
                     .frame(height: 500)
                 NavigationLink{
                     HomeScreen()
@@ -26,6 +35,51 @@ struct LoginScreen: View {
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(10)
+=======
+                    .frame(height: 100)
+                HStack {
+                    Text("email")
+                    Spacer()
+                }.padding(.horizontal)
+                TextField("type your email", text: $logInEmail)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+                Spacer()
+                    .frame(height: 80)
+                HStack {
+                    Text("password")
+                    Spacer()
+                }.padding(.horizontal)
+                TextField("type your password", text: $logInPassword)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+                Spacer()
+                    .frame(height: 120)
+                NavigationLink (
+                    destination: SignUpScreen()
+                ) {
+                    Text("Make Your Account")
+                }
+                Button(action:  {
+                    Task {
+                        if await controller.logIn(email: logInEmail, password: logInPassword) {
+                            isPresented.toggle()
+                        } else {
+                            isAlertShown.toggle()
+                        }
+                    }
+                }) {
+                    Text("Login")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }.fullScreenCover(isPresented: $isPresented, content: {
+                    HomeScreen()
+                })
+                .alert(isPresented: $isAlertShown) {
+                    Alert(title: Text("Error"), message: Text("Failed to log in"), dismissButton: .default(Text("OK")))
+>>>>>>> dev
                 }
                 Spacer()
             }
