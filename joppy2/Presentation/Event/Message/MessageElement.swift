@@ -13,4 +13,5 @@ struct MessageElement: Codable {//jsonからswiftへ
     @DocumentID var id: String?
     var message: String
     var createAt: Date
+    var title: String
 }

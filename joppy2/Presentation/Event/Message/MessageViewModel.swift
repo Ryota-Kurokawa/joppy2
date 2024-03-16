@@ -11,8 +11,7 @@ import FirebaseFirestore
 
 @Observable class MessageViewModel {
 
-    private(set) var messages: [MessageElement] = []
-    ///
+    private(set) var messages: [MessageElement] = []    ///
     private var lister: ListenerRegistration?
     /// コレクションの名称
     private let collectionName = "messages"
@@ -49,9 +48,9 @@ import FirebaseFirestore
         lister?.remove()
     }
 
-    func addMessage(message: String) {
+    func addMessage(title: String, message: String) {
         do {
-            let message = MessageElement(message: message, createAt: Date())
+            let message = MessageElement(message: message, createAt: Date(),title: title)
             let db = Firestore.firestore()
             try db.collection(collectionName).addDocument(from: message) { error in
                 if let error = error {

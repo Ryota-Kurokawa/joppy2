@@ -19,9 +19,7 @@ struct ArticleListView: View {
                     }
                 }
             }
-            //ハーフモーダルへとぶ
-            EditButton()
-                .offset(x: 130, y:350)
+          
         }
     }
 }

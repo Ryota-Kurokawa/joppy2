@@ -8,40 +8,26 @@
 import SwiftUI
 
 struct MessageRow: View {
+    let title: String
     let message: String
     let isMyMessage: Bool
     let date: Date
 
     var body: some View {
         HStack {
-            if isMyMessage {
+            if isMyMessage && !title.isEmpty {
                 Spacer()
 
                 VStack {
+                    Text(title)
                     Text(message)
                         .padding(8)
                         .background(Color.red)
                         .cornerRadius(6)
                         .foregroundColor(Color.white)
-                    Text("seil.formattedDataらしい\(self.formattedDate(date: date))")
+                    Text(self.formattedDate(date: date))
                         .font(.callout)
                 }
-            } else {
-                VStack(alignment: .leading) {
-                    Text(message)
-                        .padding(8)
-                        .background(Color.green)
-                        .cornerRadius(6)
-                        .foregroundColor(Color.white)
-
-                    HStack {
-
-                        Text(self.formattedDate(date: date))
-                            .font(.callout)
-                    }
-                }
-
-                Spacer()
             }
         }
     }

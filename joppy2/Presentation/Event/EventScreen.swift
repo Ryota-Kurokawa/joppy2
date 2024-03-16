@@ -38,7 +38,6 @@ struct EventScreen: View {
                     case .toC:
                         //参加用画面、カードで並べる
                         Text("参加したい")
-                        ArticleListView()
                     case .toB:
                         Text("開催したい")
                         HeldScreen()
