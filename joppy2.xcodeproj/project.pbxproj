@@ -16,6 +16,8 @@
 		2FD18C6036B270A1FCE68559 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F24B9B6DBF2B0C2C96F6B52A /* GoogleService-Info.plist */; };
 		30D8B8FD35017DCB36F4E710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A66C3352454BF9129A24DE6F /* Assets.xcassets */; };
 		3B030CE72D9FB8DBE2D564DF /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4177A471124CCEC7F92E3A28 /* FirebaseFirestoreSwift */; };
+		3B80E1EE2BA5817E0087E022 /* ParticipateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80E1ED2BA5817D0087E022 /* ParticipateScreen.swift */; };
+		3B80E1F02BA581840087E022 /* HeldScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80E1EF2BA581840087E022 /* HeldScreen.swift */; };
 		4C8104FE47B39C9B2A3E61D4 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEA2AB08978154149F812CF /* Coupon.swift */; };
 		5C203FB587DE12E6D5356C0E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9E59B9877D92651C24A16523 /* FirebaseFirestore */; };
 		5C862D9D8226E30E9809F25C /* UseCouponScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB9588D0FB978C7F325432 /* UseCouponScreen.swift */; };
@@ -60,6 +62,8 @@
 		35AF7A000DBFD121CB9569A7 /* joppy2UITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = joppy2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		382F94E4DFC114C37CEC7EC1 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		399E8EF20EDB2325B770DABB /* SignupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreen.swift; sourceTree = "<group>"; };
+		3B80E1ED2BA5817D0087E022 /* ParticipateScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipateScreen.swift; sourceTree = "<group>"; };
+		3B80E1EF2BA581840087E022 /* HeldScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeldScreen.swift; sourceTree = "<group>"; };
 		4DC5FD3187CC4740194668CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		524666B4ACC20C5D53E09572 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		647E97777F216FE4388A49B6 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				EA26A45379FD7B14E3687E52 /* EventScreen.swift */,
+				3B80E1EF2BA581840087E022 /* HeldScreen.swift */,
+				3B80E1ED2BA5817D0087E022 /* ParticipateScreen.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -409,12 +415,14 @@
 				EB711D41776EEA2A0A3A3B7F /* CustomButton.swift in Sources */,
 				FFD235C02BA4A3500097004D /* OrganizationScreen.swift in Sources */,
 				FFD235BE2BA4A31C0097004D /* PersonalScreen.swift in Sources */,
+				3B80E1EE2BA5817E0087E022 /* ParticipateScreen.swift in Sources */,
 				DEF44B7CCEF1A4BDB1E635DB /* EventScreen.swift in Sources */,
 				657A7590294114D7EA57F221 /* Haptics.swift in Sources */,
 				6722BAEAE5C259EDEF25A1FB /* LoginController.swift in Sources */,
 				94A62526A60F5EE426ECA24D /* LoginScreen.swift in Sources */,
 				24C8A27A9C3B7614E84859BB /* ProfileScreen.swift in Sources */,
 				0B19546A334EA74545720688 /* Publisher.swift in Sources */,
+				3B80E1F02BA581840087E022 /* HeldScreen.swift in Sources */,
 				FFD235BA2BA492320097004D /* ProfileCreateScreen.swift in Sources */,
 				E19F954570A20F4F2995C371 /* SignupController.swift in Sources */,
 				9A4131CC364546E903618FF1 /* SignupScreen.swift in Sources */,

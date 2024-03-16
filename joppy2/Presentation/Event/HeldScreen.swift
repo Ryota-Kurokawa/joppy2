@@ -9,7 +9,10 @@ import SwiftUI
 
 struct HeldScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            EventCellView(title: "マンチカン", description: "マンチカンマンチカンマンチカン", timeStamp: "2024/2/2")
+            EventCellView(title: "マンチカン", description: "マンチカンマンチカンマンチカン", timeStamp: "2024/2/2")
+        }
     }
 }
 
@@ -51,5 +54,5 @@ struct EventCellView: View {
 
 
 #Preview {
-    EventCellView(title: "Chipaton ADCチームキックオフ", description: "マンチカン", timeStamp: "2024/2/2")
+    HeldScreen()
 }
