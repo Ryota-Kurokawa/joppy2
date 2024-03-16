@@ -22,9 +22,6 @@ struct PersonalScreen: View {
                 .fontWeight(.bold)
             Text(userInfo.name)
             Text(userInfo.discription)
-            Button("test") {
-                print(userInfo)
-            }
         }
         .onAppear {
             Task {
