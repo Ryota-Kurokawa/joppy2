@@ -39,15 +39,14 @@ struct EventCellView: View {
                     Text(description)
                     Spacer()
                     HStack {
+                        Spacer()
                         Text("投稿日時\(formattedDate(date: createAt))")
-                            .font(.system(size: 20))
-                            .fontWeight(.semibold)
-                            .frame(width: 200, height: 50)
                         Spacer()
                         Text("開催日時\(formattedDate(date:customDate))")
+                        Spacer()
                     }
                 }
-                .frame(width: 330, height: 90)
+                .frame(width: 330)//ここのheightを伸ばしたい
                 .padding()
                 .background(.white)
                 .cornerRadius(8)

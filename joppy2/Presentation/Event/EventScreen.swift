@@ -37,7 +37,10 @@ struct EventScreen: View {
                 VStack {
                     switch eventFieldTypes {
                     case .toC:
-                        HeldScreen()
+                        VStack {
+                            Text("イベント一覧")
+                            HeldScreen()
+                        }
                     case .toB:
                         EditButton(isShowSheet: $isShowSheet)
 

@@ -18,9 +18,13 @@ struct EditButton: View {
         Button {
             isShowSheet.toggle()
         } label: {
-            Text("編集")
-                .frame(width: 100,height: 100)
+            Text("イベント作成")
+                .foregroundStyle(.white)
+                .fontWeight(.semibold)
+                .frame(width: 300, height: 120)
                 .background(.orange)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .shadow(color: .gray, radius: 3, x: 3, y: 3)
         }
         .sheet(isPresented: $isShowSheet){
             EditView(isShowSheet: $isShowSheet)
