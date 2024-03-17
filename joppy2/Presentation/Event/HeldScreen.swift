@@ -34,10 +34,11 @@ struct EditView: View {
     @State var typeTitle = ""
     @State var typeDescription = ""
     @State private var HeldDate: Date = Date() // 現在の日付と時刻で初期化
+    @State private var keyboardHeight: CGFloat = 0 // キーボードの高さを保持する状態
+
 
     var body: some View {
         VStack {
-            VStack {
                 Button (action:{
                     DescriptionVM.addEvent(title: typeTitle, description: typeDescription, customDate: HeldDate)
                     typeTitle = ""
@@ -47,7 +48,12 @@ struct EditView: View {
                 }) {
                     Text("投稿する")
                 }
-            }
+            DatePicker(
+                        "日付と時刻を選択",
+                        selection: $HeldDate,
+                        displayedComponents: [.date, .hourAndMinute] // 日付と時刻の選択を可能にする
+                    )
+                    .padding()
             TextField("タイトル", text: $typeTitle)
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 355,height: 40)
@@ -58,14 +64,28 @@ struct EditView: View {
                     RoundedRectangle(cornerRadius: 5) // 角が丸い四角形をオーバーレイとして追加
                         .stroke(.gray, lineWidth: 1) // このオーバーレイに枠線を適用
                 )
-            DatePicker(
-                        "日付と時刻を選択",
-                        selection: $HeldDate,
-                        displayedComponents: [.date, .hourAndMinute] // 日付と時刻の選択を可能にする
-                    )
-                    .padding()
+
         }
+        .padding(.all)
+        .offset(x: 0, y: keyboardHeight / 2) // キーボードの高さに応じてオフセット調整
+        .onAppear {
+                    self.registerKeyboardNotifications()
+                }
+                .onDisappear {
+                    NotificationCenter.default.removeObserver(self)
+                }
     }
+    // キーボードの表示・非表示を監視するためのメソッド
+       private func registerKeyboardNotifications() {
+           NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { notification in
+               guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+               self.keyboardHeight = keyboardFrame.height
+           }
+
+           NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { _ in
+               self.keyboardHeight = 0
+           }
+       }
 }
 
 
