@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class ProfileController {
     private let db = Firestore.firestore()
-    @Published var userInfo: UserInfo = UserInfo(id: "", name: "", discription: "")
+    @Published var userInfo: UserInfo = UserInfo(id: "", name: "", userId: "", discription: "")
     private let user = Auth.auth().currentUser!
     
     func updateProfile(userInfo: UserInfo) -> Bool {
@@ -29,17 +29,20 @@ class ProfileController {
         let docRef = db.collection("users").document(user.uid)
         
         do {
-            let document = try! await docRef.getDocument()
+            let document = try await docRef.getDocument()
             if document.exists {
                 let userData = document.data()
                 let id = userData!["id"] as! String
                 let name = userData!["name"] as! String
                 let discription = userData!["discription"] as! String
+                let userId = userData!["userId"] as! String
                 
-                userInfo = UserInfo(id: id, name: name, discription: discription)
+                userInfo = UserInfo(id: id, name: name, userId: userId, discription: discription)
             } else {
                 print("Document does not exist")
             }
+        } catch {
+            print("Error fetching document: \(error)")
         }
     }
 }

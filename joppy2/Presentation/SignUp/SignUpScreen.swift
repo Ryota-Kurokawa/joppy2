@@ -43,9 +43,9 @@ struct SignUpScreen: View {
                         .padding(.horizontal)
                     Spacer()
                         .frame(height: 120)
-                    Button(action:  {
+                    Button(action: {
                         Task {
-                            if await controller.signUp(email: signUpEmail,password: signUpPassword) {
+                            if await controller.signUp(email: signUpEmail, password: signUpPassword) {
                                 if await controller.signIn(email: signUpEmail, password: signUpPassword) {
                                     isPresented.toggle()
                                 } else {

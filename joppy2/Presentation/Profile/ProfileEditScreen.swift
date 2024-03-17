@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseFirestore
 import FirebaseAuth
 
-struct ProfileCreateScreen: View {
+struct ProfileEditScreen: View {
     private let user = Auth.auth().currentUser!
     @State private var name = ""
     @State private var discription = ""
@@ -49,16 +49,6 @@ struct ProfileCreateScreen: View {
                     .padding(.horizontal)
                 Spacer()
                     .frame(height: 80)
-                HStack {
-                    Text("user id like @joppy")
-                    Spacer()
-                }
-                .padding(.horizontal)
-                TextField("user id", text: $userId)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal)
-                Spacer()
-                    .frame(height: 80)
                 Button(action: {
                     Task {
                         if controller.updateProfile(userInfo: UserInfo(id: user.uid, name: name,userId: userId, discription: discription)) {
@@ -68,7 +58,7 @@ struct ProfileCreateScreen: View {
                         }
                     }
                 }) {
-                    Text("Create Profile")
+                    Text("Edit Profile")
                         .padding()
                         .background(Color.blue)
                         .foregroundColor(.white)

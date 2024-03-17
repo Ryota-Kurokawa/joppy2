@@ -10,8 +10,8 @@ import SwiftUI
 struct LoginScreen: View {
     @State var isPresented = false
     @State var isAlertShown = false
-    @State var logInEmail = ""
-    @State var logInPassword = ""
+    @State var logInEmail = "Test@gmail.com"
+    @State var logInPassword = "Password"
     let controller = LoginController()
     var body: some View {
         NavigationStack {
@@ -41,12 +41,12 @@ struct LoginScreen: View {
                     .padding(.horizontal)
                 Spacer()
                     .frame(height: 120)
-                NavigationLink (
+                NavigationLink(
                     destination: SignUpScreen()
                 ) {
                     Text("Make Your Account")
                 }
-                Button(action:  {
+                Button(action: {
                     Task {
                         if await controller.logIn(email: logInEmail, password: logInPassword) {
                             isPresented.toggle()

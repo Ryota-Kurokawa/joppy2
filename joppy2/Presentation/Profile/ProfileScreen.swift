@@ -1,4 +1,4 @@
-
+//
 //  SignupScreen.swift
 //  joppy2
 //
@@ -34,8 +34,7 @@ struct ProfileScreen: View {
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
                 VStack {
-                    switch profileFieldTypes
-                    {
+                    switch profileFieldTypes {
                     case .individual:
                         PersonalScreen()
                     case .organization:

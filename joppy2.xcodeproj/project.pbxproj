@@ -40,6 +40,7 @@
 		ED5C81022B4B497AB47A0EED /* ProfileCreateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C005F06A48579DD40D872 /* ProfileCreateScreen.swift */; };
 		F3877D00161947B128007750 /* PersonalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0617A09FD75853EEC79BC /* PersonalScreen.swift */; };
 		FC3D961B01C3CF2D20F51AB4 /* joppy2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F740CF781C5B10D626ACC8 /* joppy2UITestsLaunchTests.swift */; };
+		FF66A3C22BA6C3B800A4D12C /* ProfileEditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66A3C12BA6C3B800A4D12C /* ProfileEditScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		F24B9B6DBF2B0C2C96F6B52A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F6F740CF781C5B10D626ACC8 /* joppy2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC7A836F8A2506FD57EC098A /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		FF66A3C12BA6C3B800A4D12C /* ProfileEditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				0CA9C11B57329EAFCE726660 /* ProfileController.swift */,
 				163C005F06A48579DD40D872 /* ProfileCreateScreen.swift */,
 				B4A4282D323C976CE707E60E /* ProfileScreen.swift */,
+				FF66A3C12BA6C3B800A4D12C /* ProfileEditScreen.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				0DF5D0A4DA4A667E6B6D1AB5 /* Sources */,
 				8F802AB120D5E1365B243241 /* Resources */,
 				430DAECCE3E4CDA09662160E /* Frameworks */,
+				FF66A3C02BA60A7600A4D12C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -398,6 +402,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FF66A3C02BA60A7600A4D12C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint > /dev/null; then\n  swiftlint\n  swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0DF5D0A4DA4A667E6B6D1AB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -416,6 +440,7 @@
 				F3877D00161947B128007750 /* PersonalScreen.swift in Sources */,
 				8FAED91D0946135B4E760193 /* ProfileController.swift in Sources */,
 				ED5C81022B4B497AB47A0EED /* ProfileCreateScreen.swift in Sources */,
+				FF66A3C22BA6C3B800A4D12C /* ProfileEditScreen.swift in Sources */,
 				24C8A27A9C3B7614E84859BB /* ProfileScreen.swift in Sources */,
 				0B19546A334EA74545720688 /* Publisher.swift in Sources */,
 				E19F954570A20F4F2995C371 /* SignUpController.swift in Sources */,
