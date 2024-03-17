@@ -10,15 +10,15 @@ import SwiftUI
 
 struct EditView: View {
     @Binding var isShowSheet: Bool
-    var messageVM = MessageViewModel()
+    var DescriptionVM = EventViewModel()
     @State var typeTitle = ""
-    @State var typeMessage = ""
+    @State var typeDescription = ""
     var body: some View {
         VStack {
             Button (action:{
-                messageVM.addMessage(title: typeTitle, message: typeMessage)
+                DescriptionVM.addMessage(title: typeTitle, description: typeDescription)
                 typeTitle = ""
-                typeMessage = ""
+                typeDescription = ""
                 print("typeTitle after reset: \(typeTitle)")
                 isShowSheet = false
             }) {
@@ -29,7 +29,7 @@ struct EditView: View {
             .textFieldStyle(.roundedBorder)
             .frame(width: 355,height: 40)
             .padding(.all)
-        TextEditor(text: $typeMessage)
+        TextEditor(text: $typeDescription)
             .frame(width: 355,height: 380)
             .overlay(
                 RoundedRectangle(cornerRadius: 5) // 角が丸い四角形をオーバーレイとして追加

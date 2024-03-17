@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct HeldScreen: View {
-    private var messageVM = MessageViewModel()
-    @State private var typeMessage = ""
+    private var descriptionVM = EventViewModel()
+    @State private var typeDescription = ""
     @State private var isShowSheet = false
     var body: some View {
         VStack{
             EditButton(isShowSheet: $isShowSheet)
-            List(messageVM.messages, id: \.id) {message in
-                EventCellView(title: message.title, message: message.message, date: message.createAt, isMyMessage: true)
+            List(descriptionVM.events, id: \.id) {event in
+                EventCellView(title: event.title, description: event.description, date: event.createAt, isMyMessage: true)
             }
         }
     }
@@ -24,7 +24,7 @@ struct HeldScreen: View {
 
 struct EventCellView: View {
     let title: String
-    let message: String
+    let description: String
     let date: Date
     let isMyMessage: Bool
     
@@ -36,7 +36,7 @@ struct EventCellView: View {
                         .font(.system(size: 23))
                         .fontWeight(.bold)
                         .padding(.all)
-                    Text(message)
+                    Text(description)
                     Spacer()
                     HStack {
                         Text(formattedDate(date: date))
