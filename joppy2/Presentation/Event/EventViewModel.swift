@@ -48,11 +48,12 @@ import FirebaseFirestore
         lister?.remove()
     }
 
-    func addMessage(title: String, description: String) {
+    func addEvent(title: String, description: String, customDate: Date) {
+        let newEvent = EventElement(description: description, createAt: Date(), title: title, customDate: customDate)
         do {
-            let description = EventElement(description: description, createAt: Date(),title: title)
+            let description = EventElement(description: description, createAt: Date(),title: title,customDate: customDate)
             let db = Firestore.firestore()
-            try db.collection(collectionName).addDocument(from: description) { error in
+            try db.collection(collectionName).addDocument(from: newEvent) { error in
                 if let error = error {
                     print(error.localizedDescription)
                     return

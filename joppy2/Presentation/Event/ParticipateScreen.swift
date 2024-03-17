@@ -14,7 +14,7 @@ struct HeldScreen: View {
     var body: some View {
         VStack{
             List(descriptionVM.events, id: \.id) {event in
-                EventCellView(title: event.title, description: event.description, date: event.createAt, isMyMessage: true)
+                EventCellView(title: event.title, description: event.description, createAt: event.createAt, isMyMessage: true, customDate: event.customDate)
             }
         }
     }
@@ -24,8 +24,9 @@ struct HeldScreen: View {
 struct EventCellView: View {
     let title: String
     let description: String
-    let date: Date
+    let createAt: Date
     let isMyMessage: Bool
+    let customDate: Date
 
     var body: some View {
         if isMyMessage && !title.isEmpty {
@@ -38,12 +39,12 @@ struct EventCellView: View {
                     Text(description)
                     Spacer()
                     HStack {
-                        Text("投稿日時\(formattedDate(date: date))")
+                        Text("投稿日時\(formattedDate(date: createAt))")
                             .font(.system(size: 20))
                             .fontWeight(.semibold)
                             .frame(width: 200, height: 50)
                         Spacer()
-                        Text("開催日時 2024/03/15/ 10:20")
+                        Text("開催日時\(formattedDate(date:customDate))")
                     }
                 }
                 .frame(width: 330, height: 90)

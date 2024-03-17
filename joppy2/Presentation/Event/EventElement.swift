@@ -14,4 +14,5 @@ struct EventElement: Codable {//jsonからswiftへ
     var description: String
     var createAt: Date
     var title: String
+    var customDate: Date
 }
