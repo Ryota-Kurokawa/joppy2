@@ -41,6 +41,9 @@
 		F3877D00161947B128007750 /* PersonalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0617A09FD75853EEC79BC /* PersonalScreen.swift */; };
 		FC3D961B01C3CF2D20F51AB4 /* joppy2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F740CF781C5B10D626ACC8 /* joppy2UITestsLaunchTests.swift */; };
 		FF66A3C22BA6C3B800A4D12C /* ProfileEditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66A3C12BA6C3B800A4D12C /* ProfileEditScreen.swift */; };
+		FF66A3C42BA6C62600A4D12C /* SendCoupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66A3C32BA6C62600A4D12C /* SendCoupon.swift */; };
+		FF66A3C62BA7157800A4D12C /* CouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66A3C52BA7157800A4D12C /* CouponController.swift */; };
+		FF66A3C82BA7298100A4D12C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66A3C72BA7298100A4D12C /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,9 @@
 		F6F740CF781C5B10D626ACC8 /* joppy2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC7A836F8A2506FD57EC098A /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		FF66A3C12BA6C3B800A4D12C /* ProfileEditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditScreen.swift; sourceTree = "<group>"; };
+		FF66A3C32BA6C62600A4D12C /* SendCoupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCoupon.swift; sourceTree = "<group>"; };
+		FF66A3C52BA7157800A4D12C /* CouponController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponController.swift; sourceTree = "<group>"; };
+		FF66A3C72BA7298100A4D12C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,7 @@
 				CAEA2AB08978154149F812CF /* Coupon.swift */,
 				D9EC88FA42DEB6D981551F9E /* Publisher.swift */,
 				6DCA26E1FF477CB97714D019 /* UserInfo.swift */,
+				FF66A3C72BA7298100A4D12C /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				83EB9588D0FB978C7F325432 /* UseCouponScreen.swift */,
+				FF66A3C32BA6C62600A4D12C /* SendCoupon.swift */,
+				FF66A3C52BA7157800A4D12C /* CouponController.swift */,
 			);
 			path = UseCoupon;
 			sourceTree = "<group>";
@@ -428,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2453A5F6AA220EF079D016A4 /* AuthProtocol.swift in Sources */,
+				FF66A3C62BA7157800A4D12C /* CouponController.swift in Sources */,
 				831C22DAA9872F3F56328229 /* AuthViewModel.swift in Sources */,
 				4C8104FE47B39C9B2A3E61D4 /* Coupon.swift in Sources */,
 				EB711D41776EEA2A0A3A3B7F /* CustomButton.swift in Sources */,
@@ -445,10 +455,12 @@
 				0B19546A334EA74545720688 /* Publisher.swift in Sources */,
 				E19F954570A20F4F2995C371 /* SignUpController.swift in Sources */,
 				9A4131CC364546E903618FF1 /* SignUpScreen.swift in Sources */,
+				FF66A3C82BA7298100A4D12C /* Article.swift in Sources */,
 				5C862D9D8226E30E9809F25C /* UseCouponScreen.swift in Sources */,
 				E5F0A8B776B9A8567AC89B6B /* UserInfo.swift in Sources */,
 				027438863A460154E4E119A3 /* WriteArticleScreen.swift in Sources */,
 				B969A0FCF7EFDC4F8BB6256C /* joppy2App.swift in Sources */,
+				FF66A3C42BA6C62600A4D12C /* SendCoupon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -61,7 +61,7 @@ struct ProfileCreateScreen: View {
                     .frame(height: 80)
                 Button(action: {
                     Task {
-                        if controller.updateProfile(userInfo: UserInfo(id: user.uid, name: name,userId: userId, discription: discription)) {
+                        if controller.updateProfile(userInfo: UserInfo(id: user.uid, name: name, userId: userId, discription: discription)) {
                             isCreateProfile.toggle()
                         } else {
                             isShowAlert.toggle()

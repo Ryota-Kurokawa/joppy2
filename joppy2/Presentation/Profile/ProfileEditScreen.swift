@@ -51,7 +51,7 @@ struct ProfileEditScreen: View {
                     .frame(height: 80)
                 Button(action: {
                     Task {
-                        if controller.updateProfile(userInfo: UserInfo(id: user.uid, name: name,userId: userId, discription: discription)) {
+                        if controller.updateProfile(userInfo: UserInfo(id: user.uid, name: name, userId: userId, discription: discription)) {
                             isCreateProfile.toggle()
                         } else {
                             isShowAlert.toggle()
@@ -76,6 +76,7 @@ struct ProfileEditScreen: View {
                 await controller.fetchUser()
                 self.name = controller.userInfo.name
                 self.discription = controller.userInfo.discription
+                self.userId = controller.userInfo.userId
             }
         }
     }

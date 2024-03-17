@@ -10,8 +10,9 @@ import Foundation
 struct Coupon: Codable, Identifiable {
     var id: UUID
     //    店のid
-    let publishedBy: UUID
+    let publishedBy: String
     let disscountRate: Int
+    let message: String
     var isUsed: Bool
 
 }

@@ -13,7 +13,7 @@ struct PersonalScreen: View {
     private let user = Auth.auth().currentUser!
     private let controller = ProfileController()
     private let db = Firestore.firestore()
-    @State private var userInfo: UserInfo = UserInfo(id: "", name: "", userId: "", discription: "")
+    @State var userInfo: UserInfo = UserInfo(id: "", name: "", userId: "", discription: "")
     
     var body: some View {
         VStack {
