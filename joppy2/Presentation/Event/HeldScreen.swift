@@ -1,5 +1,6 @@
+
 //
-//  HeldScreen.swift
+//  EditView.swift
 //  joppy2
 //
 //  Created by 櫻井絵理香 on 2024/03/16.
@@ -7,64 +8,7 @@
 
 import SwiftUI
 
-struct HeldScreen: View {
-    private var descriptionVM = EventViewModel()
-    @State private var typeDescription = ""
-    @State private var isShowSheet = false
-    var body: some View {
-        VStack{
-            EditButton(isShowSheet: $isShowSheet)
-            List(descriptionVM.events, id: \.id) {event in
-                EventCellView(title: event.title, description: event.description, date: event.createAt, isMyMessage: true)
-            }
-        }
-    }
-}
 
-
-struct EventCellView: View {
-    let title: String
-    let description: String
-    let date: Date
-    let isMyMessage: Bool
-    
-    var body: some View {
-        if isMyMessage && !title.isEmpty {
-            VStack {
-                VStack {
-                    Text(title)
-                        .font(.system(size: 23))
-                        .fontWeight(.bold)
-                        .padding(.all)
-                    Text(description)
-                    Spacer()
-                    HStack {
-                        Text(formattedDate(date: date))
-                            .font(.system(size: 20))
-                            .fontWeight(.semibold)
-                            .frame(width: 200, height: 50)
-                        Spacer()
-                    }
-                }
-                .frame(width: 330, height: 90)
-                .padding()
-                .background(.white)
-                .cornerRadius(8)
-                .clipped()
-                .shadow(color: .gray.opacity(0.7), radius: 5)
-                Spacer()
-                
-            }
-            .padding()
-        }
-    }
-    func formattedDate(date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.timeStyle = .short
-        return formatter.string(from: date)
-    }
-}
 
 struct EditButton: View {
     @Binding var isShowSheet: Bool
@@ -82,7 +26,33 @@ struct EditButton: View {
     }
 }
 
-
-#Preview {
-    HeldScreen()
+struct EditView: View {
+    @Binding var isShowSheet: Bool
+    var DescriptionVM = EventViewModel()
+    @State var typeTitle = ""
+    @State var typeDescription = ""
+    var body: some View {
+        VStack {
+            Button (action:{
+                DescriptionVM.addMessage(title: typeTitle, description: typeDescription)
+                typeTitle = ""
+                typeDescription = ""
+                print("typeTitle after reset: \(typeTitle)")
+                isShowSheet = false
+            }) {
+                Text("投稿する")
+            }
+        }
+        TextField("タイトル", text: $typeTitle)
+            .textFieldStyle(.roundedBorder)
+            .frame(width: 355,height: 40)
+            .padding(.all)
+        TextEditor(text: $typeDescription)
+            .frame(width: 355,height: 380)
+            .overlay(
+                RoundedRectangle(cornerRadius: 5) // 角が丸い四角形をオーバーレイとして追加
+                    .stroke(.gray, lineWidth: 1) // このオーバーレイに枠線を適用
+            )        }
 }
+
+

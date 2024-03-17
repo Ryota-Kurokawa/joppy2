@@ -18,7 +18,6 @@
 		3B030CE72D9FB8DBE2D564DF /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4177A471124CCEC7F92E3A28 /* FirebaseFirestoreSwift */; };
 		3B80E1EE2BA5817E0087E022 /* ParticipateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80E1ED2BA5817D0087E022 /* ParticipateScreen.swift */; };
 		3B80E1F02BA581840087E022 /* HeldScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80E1EF2BA581840087E022 /* HeldScreen.swift */; };
-		3B80E20F2BA5B8140087E022 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80E20E2BA5B8140087E022 /* EditView.swift */; };
 		3BB601E22BA67D5300C95E17 /* EventScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB601DF2BA67B8B00C95E17 /* EventScreen.swift */; };
 		3BB601E32BA67D7400C95E17 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB601E02BA67BB200C95E17 /* EventViewModel.swift */; };
 		3BB601E42BA67D7700C95E17 /* EventElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB601E12BA67BB200C95E17 /* EventElement.swift */; };
@@ -67,9 +66,6 @@
 		399E8EF20EDB2325B770DABB /* SignupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreen.swift; sourceTree = "<group>"; };
 		3B80E1ED2BA5817D0087E022 /* ParticipateScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipateScreen.swift; sourceTree = "<group>"; };
 		3B80E1EF2BA581840087E022 /* HeldScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeldScreen.swift; sourceTree = "<group>"; };
-		3B80E2072BA5B2680087E022 /* EventViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
-		3B80E2082BA5B2680087E022 /* EventElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventElement.swift; sourceTree = "<group>"; };
-		3B80E20E2BA5B8140087E022 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		3BB601DF2BA67B8B00C95E17 /* EventScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScreen.swift; sourceTree = "<group>"; };
 		3BB601E02BA67BB200C95E17 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		3BB601E12BA67BB200C95E17 /* EventElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventElement.swift; sourceTree = "<group>"; };
@@ -141,15 +137,6 @@
 				6DCA26E1FF477CB97714D019 /* UserInfo.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		3B80E2052BA5B2680087E022 /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				3B80E2072BA5B2680087E022 /* EventViewModel.swift */,
-				3B80E2082BA5B2680087E022 /* EventElement.swift */,
-			);
-			path = Message;
 			sourceTree = "<group>";
 		};
 		602E2C8F6AED79F25A396265 /* WriteArticle */ = {
@@ -306,13 +293,11 @@
 		FF5AA3B56CC487D64506E2F2 /* Event */ = {
 			isa = PBXGroup;
 			children = (
-				3B80E2052BA5B2680087E022 /* Message */,
-				3B80E20E2BA5B8140087E022 /* EditView.swift */,
-				3BB601E12BA67BB200C95E17 /* EventElement.swift */,
-				3B80E1EF2BA581840087E022 /* HeldScreen.swift */,
 				3BB601E02BA67BB200C95E17 /* EventViewModel.swift */,
-				3BB601DF2BA67B8B00C95E17 /* EventScreen.swift */,
+				3BB601E12BA67BB200C95E17 /* EventElement.swift */,
 				3B80E1ED2BA5817D0087E022 /* ParticipateScreen.swift */,
+				3BB601DF2BA67B8B00C95E17 /* EventScreen.swift */,
+				3B80E1EF2BA581840087E022 /* HeldScreen.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -437,7 +422,6 @@
 				FFD235C02BA4A3500097004D /* OrganizationScreen.swift in Sources */,
 				FFD235BE2BA4A31C0097004D /* PersonalScreen.swift in Sources */,
 				3B80E1EE2BA5817E0087E022 /* ParticipateScreen.swift in Sources */,
-				3B80E20F2BA5B8140087E022 /* EditView.swift in Sources */,
 				657A7590294114D7EA57F221 /* Haptics.swift in Sources */,
 				6722BAEAE5C259EDEF25A1FB /* LoginController.swift in Sources */,
 				94A62526A60F5EE426ECA24D /* LoginScreen.swift in Sources */,
