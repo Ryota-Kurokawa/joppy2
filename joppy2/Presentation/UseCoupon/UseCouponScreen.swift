@@ -11,7 +11,7 @@ struct UseCouponScreen: View {
     @State private var isPresented = false
     let controller = CouponController()
     @State private var receivedUser = UserInfo(id: "", name: "", userId: "", discription: "")
-    @State private var coupon:[Coupon] = []
+    @State private var couponList:[Coupon] = []
     
     var body: some View {
         VStack {
@@ -19,7 +19,7 @@ struct UseCouponScreen: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
             List {
-                ForEach(coupon) { coupon in
+                ForEach(couponList) { coupon in
                     VStack {
                         HStack {
                             Text("Disscount Rate")
@@ -57,13 +57,14 @@ struct UseCouponScreen: View {
         .onAppear {
             Task {
                 await controller.fetchUserId()
-                self.receivedUser = controller.receivedUser
+                receivedUser = controller.receivedUser
+                couponList = []
                 do {
                     try await controller.fetchCoupon(userId: receivedUser.userId)
+                    couponList = controller.couponList
                 } catch {
                     print("error")
                 }
-                
             }
         }
     }

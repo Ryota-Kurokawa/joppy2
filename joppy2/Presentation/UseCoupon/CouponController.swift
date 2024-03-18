@@ -14,10 +14,11 @@ class CouponController {
     private let user = Auth.auth().currentUser!
     @Published var receivedUser = UserInfo(id: "", name: "", userId: "", discription: "")
     @Published var couopon = Coupon(id: UUID(), publishedBy: "", disscountRate: 0, message: "", isUsed: false)
+    @Published var couponList: [Coupon] = []
     
     
     func sendCoupon(sendToUserId: String, disscountRate: Int, message: String) async throws {
-        let docRef = db.collection("coupon").document(sendToUserId).collection("received").document()
+        let docRef = db.collection("Coupon").document(sendToUserId).collection("received").document()
         
         let coupon = Coupon(id: UUID(), publishedBy: user.uid, disscountRate: disscountRate, message: message, isUsed: false)
         
@@ -27,12 +28,27 @@ class CouponController {
     }
     
     func fetchCoupon(userId: String) async throws {
-//        let  docRef = db.collection("coupon").document(userId).collection("received").document()
+        let  docRef = db.collection("Coupon").document(userId).collection("received")
+
 //
-////
-////        listとしてfetchできていないのでdocumentをlistに入れて取得し、それを出力させる。
-////        
+//        listとしてfetchできていないのでdocumentをlistに入れて取得し、それを出力させる。
 //        
+        do {
+            let couponSnapshot = try await docRef.getDocuments()
+            for document in couponSnapshot.documents {
+                let couponData = document.data()
+                _ = couponData["id"] as! String
+                let publishedBy = couponData["publishedBy"] as! String
+                let disscountRate = couponData["disscountRate"] as! Int
+                let message = couponData["message"] as! String
+                let isUsed = couponData["isUsed"] as! Bool
+                
+                couopon = Coupon(id: UUID(), publishedBy: publishedBy, disscountRate: disscountRate, message: message, isUsed: isUsed)
+                couponList.append(couopon)
+                print(couponList)
+            }
+        }
+        
 //        do {
 //            let document = try await docRef.getDocument()
 //            if document.exists {
@@ -51,7 +67,7 @@ class CouponController {
     }
     
     func fetchUserId() async {
-        let docRef = db.collection("users").document(user.uid)
+        let docRef = db.collection("Users").document(user.uid)
         
         do {
             let document = try await docRef.getDocument()
