@@ -31,6 +31,8 @@ struct EventCellView: View {
     var body: some View {
         if isMyMessage && !title.isEmpty {
             ZStack {
+                Color.customBackgroundColor
+                    .ignoresSafeArea()
                 VStack {
                     VStack {
                         Text(title)
@@ -40,8 +42,6 @@ struct EventCellView: View {
                         Text(description)
                         Spacer()
                         HStack {
-                            Spacer()
-                            Text("投稿日時\(formattedDate(date: createAt))")
                             Spacer()
                             Text("開催日時\(formattedDate(date:customDate))")
                             Spacer()
