@@ -31,7 +31,6 @@ struct WriteArticleScreen: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color.customBlackColor)
                 Spacer()
-                    .frame(height: 100)
                 Text("Title")
                     .fontWeight(.semibold)
                     .font(.custom("Helvetica", size: 20))
@@ -52,7 +51,6 @@ struct WriteArticleScreen: View {
                     .padding(.horizontal)
                     .focused($isFocused)
                 Spacer()
-                    .frame(height: 100)
                 VStack {
                     Text("Content")
                         .fontWeight(.semibold)
@@ -66,27 +64,21 @@ struct WriteArticleScreen: View {
                         .border(Color.gray.opacity(0.5), width: 1)
                 }
                 Spacer()
-                ZStack {
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            // ここに記事を投稿する処理を書く
-
-                        }) {
-                            Image(systemName: "paperplane")
-                        }
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        Spacer()
-                            .frame(width: 20)
-                    }
+                Button(action: {
+                    // ここに記事を投稿する処理を書く
+                }) {
+                    Image(systemName: "paperplane")
                 }
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                Spacer()
             }
         }
     }
 }
+
 
 #Preview {
     WriteArticleScreen()
