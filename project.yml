@@ -45,7 +45,7 @@ targets:
         MARKETING_VERSION: 1.0.0
         CURRENT_PROJECT_VERSION: 1
         ENABLE_USER_SCRIPT_SANDBOXING: NO
-        DEVELOPMENT_TEAM: chanchrons
+        DEVELOPMENT_TEAM: Chanchrons
         OTHER_LDFLAGS:
           - $(inherited)
           - -ObjC
