@@ -48,7 +48,7 @@ struct ProfileScreen: View {
                     Spacer()
                 }
             }
-            }
+        }
     }
 }
 
