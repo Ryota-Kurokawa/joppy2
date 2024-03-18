@@ -66,6 +66,7 @@ struct LoginScreen: View {
                                     .stroke(Color.white, lineWidth: 2)
                             )
                     }
+                    .offset(x: 0, y: -35)
                     Button(action: {
                         Task {
                             if await controller.logIn(email: logInEmail, password: logInPassword) {
@@ -90,10 +91,8 @@ struct LoginScreen: View {
                     .alert(isPresented: $isAlertShown) {
                         Alert(title: Text("Error"), message: Text("Failed to log in"), dismissButton: .default(Text("OK")))
                     }
+                    .offset(x: 0, y: -30)
                     Spacer()
-                }
-                .onTapGesture {
-                    isFocused = false
                 }
             }
 

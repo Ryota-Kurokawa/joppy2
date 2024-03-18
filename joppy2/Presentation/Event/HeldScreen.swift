@@ -64,8 +64,10 @@ struct EditView: View {
                         displayedComponents: [.date, .hourAndMinute] // 日付と時刻の選択を可能にする
                     )
                     .padding()
-            TextField("タイトル", text: $typeTitle)
-                .focused($isEditControll)
+            Form {
+                TextField("タイトル", text: $typeTitle)
+                    .focused($isEditControll)
+            }
                 .onTapGesture {
                     isEditControll = false
                 }
@@ -73,8 +75,10 @@ struct EditView: View {
                 .frame(width: 355,height: 40)
                 .padding(.all)
 
-            TextEditor(text: $typeDescription)
-                .focused($isEditControll)
+            Form {
+                TextEditor(text: $typeDescription)
+                    .focused($isEditControll)
+            }
                 .onTapGesture {
                     isEditControll = false//フォーカス解除
                 }
