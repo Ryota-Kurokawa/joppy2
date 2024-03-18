@@ -18,14 +18,18 @@ struct EventScreen: View {
     @ScaledMetric(relativeTo: .body) var verticalPadding: CGFloat = 2
     @ScaledMetric(relativeTo: .body) var cornerRadiusValue: CGFloat = 8
     @State var eventFieldTypes: EventFieldTypes = .toC
-    
+    @State var isShowSheet: Bool = false
+
     var body: some View {
         NavigationStack {
             VStack {
+                
+                Header()
+                
                 Text("Joppy")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .padding(.vertical, 40)
+                    .padding(.top, 20)
                 Picker("TextFieldStyle", selection: $eventFieldTypes) {
                     Text("参加したい!").tag(EventFieldTypes.toC)
                     Text("開催したい！").tag(EventFieldTypes.toB)
@@ -35,13 +39,13 @@ struct EventScreen: View {
                 VStack {
                     switch eventFieldTypes {
                     case .toC:
-                        ScrollView {
-                            Text("to c")
+                        VStack {
+                            Text("イベント一覧")
+                            HeldScreen()
                         }
                     case .toB:
-                        ScrollView {
-                            Text("to b")
-                        }
+                        EditButton(isShowSheet: $isShowSheet)
+
                     }
                 }
                 .animation(.easeInOut, value: eventFieldTypes)
