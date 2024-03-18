@@ -15,41 +15,47 @@ struct PersonalScreen: View {
     private let db = Firestore.firestore()
     @FocusState var isFocused: Bool
     @State var userInfo: UserInfo = UserInfo(id: "", name: "", userId: "", discription: "")
-    
+
     var body: some View {
         ZStack {
             Color.customBackgroundColor
                 .ignoresSafeArea()
             VStack {
-                Text("Personal")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Text(userInfo.name)
-                    .font(.custom("AvenirNext-Heavy", size: 20))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.customBlackColor)
-                Text(userInfo.discription)
-                    .font(.custom("AvenirNext-Heavy", size: 20))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.customBlackColor)
-                Text(userInfo.userId)
-                    .font(.custom("AvenirNext-Heavy", size: 20))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.customBlackColor)
                 Spacer()
-                HStack {
+                VStack {
                     Spacer()
-                    NavigationLink(destination: ProfileEditScreen()) {
-                        Image(systemName: "pencil")
-                            .frame(height: 60)
-                            .frame(width: 60)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(30)
-                            .padding(.horizontal, 15)
-                            .shadow(radius: 10)
-                    }
+                    Text(userInfo.name)
+                        .font(.custom("AvenirNext-Heavy", size: 20))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.customBlackColor)
+                    Spacer()
+                    Text(userInfo.discription)
+                        .font(.custom("AvenirNext-Heavy", size: 20))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.customBlackColor)
+                    Spacer()
+                    Text(userInfo.userId)
+                        .font(.custom("AvenirNext-Heavy", size: 20))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.customBlackColor)
+                    Spacer()
                 }
+                .frame(width: 340, height: 300)
+                .background(.white)
+                .cornerRadius(15.0)
+                Spacer()
+                NavigationLink(destination: ProfileEditScreen()) {
+                    Text("編集する")
+                        .foregroundColor(.white)
+                        .frame(width: 100, height: 50)
+                        .background(Color.customRedColor)
+                        .cornerRadius(15)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.white, lineWidth: 1)
+                        )
+                }
+                Spacer()
             }
         }
         .onAppear {
