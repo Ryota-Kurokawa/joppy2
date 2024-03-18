@@ -17,7 +17,7 @@ class ProfileController {
     func updateProfile(userInfo: UserInfo) -> Bool {
         
         do {
-            try db.collection("users").document(user.uid).setData(from: userInfo)
+            try db.collection("Users").document(user.uid).setData(from: userInfo)
             return true
         } catch {
             print("Error writing document: \(error)")
@@ -26,7 +26,7 @@ class ProfileController {
     }
     
     func fetchUser() async {
-        let docRef = db.collection("users").document(user.uid)
+        let docRef = db.collection("Users").document(user.uid)
         
         do {
             let document = try await docRef.getDocument()

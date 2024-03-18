@@ -11,28 +11,31 @@ struct UseCouponScreen: View {
     @State private var isPresented = false
     let controller = CouponController()
     @State private var receivedUser = UserInfo(id: "", name: "", userId: "", discription: "")
-    @State private var coupon:[Coupon] = []
+    @State private var couponList:[Coupon] = []
     
     var body: some View {
-        ZStack {
-            Color.customBackgroundColor // ここを修正
-                .ignoresSafeArea()
+        NavigationStack {
             VStack {
                 Text("Coupon")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 List {
-                    ForEach(coupon) { coupon in
-                        VStack {
-                            HStack {
-                                Text("Disscount Rate")
-                                Spacer()
-                                Text("\(coupon.disscountRate)円")
-                            }
-                            HStack {
-                                Text("Message")
-                                Spacer()
-                                Text(coupon.message)
+                    ForEach(couponList) { coupon in
+                        NavigationLink(destination: DetailScreen(coupon: coupon)){
+                            VStack {
+                                HStack {
+                                    Text("Disscount Rate")
+                                    Spacer()
+                                    Text("\(coupon.disscountRate)円")
+                                }
+                                HStack {
+                                    Text("Message")
+                                    Spacer()
+                                    Text(coupon.message)
+                                }
+                                Text(coupon.id.uuidString)
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
                             }
                         }
                     }
@@ -61,13 +64,13 @@ struct UseCouponScreen: View {
         .onAppear {
             Task {
                 await controller.fetchUserId()
-                self.receivedUser = controller.receivedUser
+                receivedUser = controller.receivedUser
                 do {
                     try await controller.fetchCoupon(userId: receivedUser.userId)
+                    couponList = controller.couponList
                 } catch {
                     print("error")
                 }
-                
             }
         }
     }
