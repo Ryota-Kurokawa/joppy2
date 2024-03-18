@@ -14,6 +14,7 @@ struct HomeScreen: View {
                 .tabItem {
                     Image(systemName: "house")
                     Text("Event")
+                        .foregroundColor(.white)
                 }
             WriteArticleScreen()
                 .tabItem {

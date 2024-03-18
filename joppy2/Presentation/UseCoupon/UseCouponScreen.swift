@@ -14,43 +14,47 @@ struct UseCouponScreen: View {
     @State private var coupon:[Coupon] = []
     
     var body: some View {
-        VStack {
-            Text("Coupon")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            List {
-                ForEach(coupon) { coupon in
-                    VStack {
-                        HStack {
-                            Text("Disscount Rate")
-                            Spacer()
-                            Text("\(coupon.disscountRate)円")
-                        }
-                        HStack {
-                            Text("Message")
-                            Spacer()
-                            Text(coupon.message)
+        ZStack {
+            Color.customBackgroundColor // ここを修正
+                .ignoresSafeArea()
+            VStack {
+                Text("Coupon")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                List {
+                    ForEach(coupon) { coupon in
+                        VStack {
+                            HStack {
+                                Text("Disscount Rate")
+                                Spacer()
+                                Text("\(coupon.disscountRate)円")
+                            }
+                            HStack {
+                                Text("Message")
+                                Spacer()
+                                Text(coupon.message)
+                            }
                         }
                     }
                 }
-            }
-            ZStack {
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        isPresented.toggle()
-                    }) {
-                        Image(systemName: "paperplane")
+                ZStack {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            isPresented.toggle()
+                        }) {
+                            Image(systemName: "paperplane")
+                        }
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .sheet(isPresented: $isPresented, content: {
+                            SendCoupon()
+                        })
+                        Spacer()
+                            .frame(width: 20)
                     }
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .sheet(isPresented: $isPresented, content: {
-                        SendCoupon()
-                    })
-                    Spacer()
-                        .frame(width: 20)
                 }
             }
         }
