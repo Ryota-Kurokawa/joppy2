@@ -19,7 +19,8 @@ struct EventScreen: View {
     @ScaledMetric(relativeTo: .body) var verticalPadding: CGFloat = 2
     @ScaledMetric(relativeTo: .body) var cornerRadiusValue: CGFloat = 8
     @State var eventFieldTypes: EventFieldTypes = .toC
-    
+    @State var isShowSheet: Bool = false
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -39,13 +40,13 @@ struct EventScreen: View {
                 VStack {
                     switch eventFieldTypes {
                     case .toC:
-                        ScrollView {
-                            Text("to c")
+                        VStack {
+                            Text("イベント一覧")
+                            HeldScreen()
                         }
                     case .toB:
-                        ScrollView {
-                            Text("to b")
-                        }
+                        EditButton(isShowSheet: $isShowSheet)
+
                     }
                 }
                 .animation(.easeInOut, value: eventFieldTypes)
