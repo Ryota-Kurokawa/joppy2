@@ -55,7 +55,6 @@ struct EventCellView: View {
                 Spacer()
 
             }
-            .padding()
         }
     }
     func formattedDate(date: Date) -> String {

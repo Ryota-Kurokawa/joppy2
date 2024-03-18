@@ -44,6 +44,7 @@ struct PersonalScreen: View {
                 self.userInfo = controller.userInfo
             }
         }
+        .background(Color.customBackgroundColor)
     }
 }
 #Preview {

@@ -12,62 +12,84 @@ struct LoginScreen: View {
     @State var isAlertShown = false
     @State var logInEmail = "Test@gmail.com"
     @State var logInPassword = "Password"
+    @FocusState var isFocused: Bool
     let controller = LoginController()
     var body: some View {
         NavigationStack {
-            VStack {
-                Spacer()
-                    .frame(height: 100)
-                Text("Joppy")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Spacer()
-                    .frame(height: 100)
-                HStack {
-                    Text("email")
+            ZStack {
+                Color.customBackgroundColor
+                                 .ignoresSafeArea()
+                VStack {
                     Spacer()
-                }.padding(.horizontal)
-                TextField("type your email", text: $logInEmail)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal)
-                Spacer()
-                    .frame(height: 80)
-                HStack {
-                    Text("password")
-                    Spacer()
-                }.padding(.horizontal)
-                TextField("type your password", text: $logInPassword)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal)
-                Spacer()
-                    .frame(height: 120)
-                NavigationLink(
-                    destination: SignUpScreen()
-                ) {
-                    Text("Make Your Account")
-                }
-                Button(action: {
-                    Task {
-                        if await controller.logIn(email: logInEmail, password: logInPassword) {
-                            isPresented.toggle()
-                        } else {
-                            isAlertShown.toggle()
-                        }
-                    }
-                }) {
-                    Text("Login")
-                        .padding()
-                        .background(Color.blue)
+                        .frame(height: 100)
+                    Text("Joppy")
+                        .font(.custom("AvenirNext-Heavy", size: 60))
+                        .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .cornerRadius(10)
-                }.fullScreenCover(isPresented: $isPresented, content: {
-                    HomeScreen()
-                })
-                .alert(isPresented: $isAlertShown) {
-                    Alert(title: Text("Error"), message: Text("Failed to log in"), dismissButton: .default(Text("OK")))
+                    Spacer()
+                        .frame(height: 100)
+                    HStack {
+                        Text("email")
+                            .font(.custom("AvenirNext-Heavy", size: 20))
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }.padding(.horizontal)
+                    TextField("type your email", text: $logInEmail)
+                        .focused($isFocused)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal)
+                    Spacer()
+                        .frame(height: 80)
+                    HStack {
+                        Text("password")
+                            .font(.custom("AvenirNext-Heavy", size: 20))
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }.padding(.horizontal)
+                    TextField("type your password", text: $logInPassword)
+                        .focused($isFocused)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal)
+                    Spacer()
+                        .frame(height: 120)
+                    NavigationLink(
+                        destination: SignUpScreen()
+                    ) {
+                        Text("新規登録")
+                    }
+                    Button(action: {
+                        Task {
+                            if await controller.logIn(email: logInEmail, password: logInPassword) {
+                                isPresented.toggle()
+                            } else {
+                                isAlertShown.toggle()
+                            }
+                        }
+                    }) {
+                        Text("Login")
+                            .fontWeight(.semibold)
+                            .font(.custom("Helvetica", size: 20))
+                            .padding()
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: 100,height: 50)
+                    .background(Color.customAccentColor)
+                    .cornerRadius(15.0)
+                    .fullScreenCover(isPresented: $isPresented, content: {
+                        HomeScreen()
+                    })
+                    .alert(isPresented: $isAlertShown) {
+                        Alert(title: Text("Error"), message: Text("Failed to log in"), dismissButton: .default(Text("OK")))
+                    }
+                    Spacer()
                 }
-                Spacer()
+                .onTapGesture {
+                    isFocused = false
+                }
             }
+
         }
     }
 }
