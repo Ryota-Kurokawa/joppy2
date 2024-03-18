@@ -12,53 +12,68 @@ struct WriteArticleScreen: View {
     @State private var title = ""
     @State private var storeName = ""
     @State private var articleText = "**Thank you!** Please visit our [website](https://example.com)"
+    @FocusState var isFocused: Bool
     var body: some View {
-        VStack {
-            Text("Write Article")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Spacer()
-                .frame(height: 80)
-            Text("Title")
-            TextField("Title", text: $title)
-                .padding()
-            Spacer()
-                .frame(height: 40)
-            Text("Store Name")
-            TextField("禁断の扉", text: $storeName)
-                .padding()
-            Spacer()
-                .frame(height: 40)
-            HStack {
+        ZStack {
+            Color.customBackgroundColor
+                .ignoresSafeArea()
+            Color.clear
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    // テキストフィールドからフォーカスを外す
+                    isFocused = false
+                }
+            VStack {
+                Text("Write Article")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                 Spacer()
-                    .frame(width: 20)
-                Text("Content")
+                    .frame(height: 80)
+                Text("Title")
+                TextField("Title", text: $title)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+                    .focused($isFocused)
                 Spacer()
-            }
-            TextEditor(text: $articleText)
-                .frame(height: 100)
-                .cornerRadius(10)
-                .border(Color.gray.opacity(0.5), width: 1)
-                .padding()
-            Text(changeMarkdownText(articleText))
-                .frame(height: 100)
-                .frame(width: 360)
-                .border(Color.gray.opacity(0.5), width: 1)
-            ZStack {
+                    .frame(height: 40)
+                Text("Store Name")
+                TextField("禁断の扉", text: $storeName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+                    .focused($isFocused)
+                Spacer()
+                    .frame(height: 40)
                 HStack {
                     Spacer()
-                    Button(action: {
-                        // ここに記事を投稿する処理を書く
-                        
-                    }) {
-                        Image(systemName: "paperplane")
-                    }
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    Spacer()
                         .frame(width: 20)
+                    Text("Content")
+                    Spacer()
+                }
+                TextEditor(text: $articleText)
+                    .frame(height: 100)
+                    .cornerRadius(10)
+                    .border(Color.gray.opacity(0.5), width: 1)
+                    .padding()
+                Text(changeMarkdownText(articleText))
+                    .frame(height: 100)
+                    .frame(width: 360)
+                    .border(Color.gray.opacity(0.5), width: 1)
+                ZStack {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            // ここに記事を投稿する処理を書く
+
+                        }) {
+                            Image(systemName: "paperplane")
+                        }
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        Spacer()
+                            .frame(width: 20)
+                    }
                 }
             }
         }
