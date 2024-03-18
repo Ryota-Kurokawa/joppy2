@@ -88,25 +88,7 @@ struct EditView: View {
 
         }
         .padding(.all)
-//        .offset(x: 0, y: keyboardHeight / 2) // キーボードの高さに応じてオフセット調整
-//        .onAppear {
-//                    self.registerKeyboardNotifications()
-//                }
-//                .onDisappear {
-//                    NotificationCenter.default.removeObserver(self)
-//                }
     }
-//    // キーボードの表示・非表示を監視するためのメソッド
-//       private func registerKeyboardNotifications() {
-//           NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { notification in
-//               guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-//               self.keyboardHeight = keyboardFrame.height
-//           }
-//
-//           NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { _ in
-//               self.keyboardHeight = 0
-//           }
-//       }
 }
 
 

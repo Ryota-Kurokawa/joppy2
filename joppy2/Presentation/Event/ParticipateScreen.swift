@@ -30,30 +30,31 @@ struct EventCellView: View {
 
     var body: some View {
         if isMyMessage && !title.isEmpty {
-            VStack {
+            ZStack {
                 VStack {
-                    Text(title)
-                        .font(.system(size: 23))
-                        .fontWeight(.bold)
-                        .padding(.all)
-                    Text(description)
-                    Spacer()
-                    HStack {
+                    VStack {
+                        Text(title)
+                            .font(.system(size: 23))
+                            .fontWeight(.bold)
+                            .padding(.all)
+                        Text(description)
                         Spacer()
-                        Text("投稿日時\(formattedDate(date: createAt))")
-                        Spacer()
-                        Text("開催日時\(formattedDate(date:customDate))")
-                        Spacer()
+                        HStack {
+                            Spacer()
+                            Text("投稿日時\(formattedDate(date: createAt))")
+                            Spacer()
+                            Text("開催日時\(formattedDate(date:customDate))")
+                            Spacer()
+                        }
                     }
+                    .frame(width: 330)//ここのheightを伸ばしたい
+                    .padding()
+                    .background(.white)
+                    .cornerRadius(8)
+                    .clipped()
+                    .shadow(color: .gray.opacity(0.7), radius: 5)
+                    Spacer()
                 }
-                .frame(width: 330)//ここのheightを伸ばしたい
-                .padding()
-                .background(.white)
-                .cornerRadius(8)
-                .clipped()
-                .shadow(color: .gray.opacity(0.7), radius: 5)
-                Spacer()
-
             }
         }
     }

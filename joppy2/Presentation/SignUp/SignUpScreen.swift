@@ -86,7 +86,7 @@ struct SignUpScreen: View {
 
                     Spacer()
                 }
-                .offset(x: 0, y: -50)
+                .offset(x: 0, y: -60)
             }
         }
     }
