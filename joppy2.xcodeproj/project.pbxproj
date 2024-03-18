@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,7 +32,7 @@
 		9A4131CC364546E903618FF1 /* SignupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E8EF20EDB2325B770DABB /* SignupScreen.swift */; };
 		AB9C1B827B2422AEE93CC4CC /* project.yml in Resources */ = {isa = PBXBuildFile; fileRef = A23BADF6082DDBB13D2415D8 /* project.yml */; };
 		B969A0FCF7EFDC4F8BB6256C /* joppy2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B8B5867A53C634BF8598ED /* joppy2App.swift */; };
-		D21C91B72BA5829900D43CC1 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21C91B62BA5829900D43CC1 /* Header.swift */; };
+		BA5819AE4AD277FFA4C7AA89 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF32A2D31FEF434C2F155ED /* Header.swift */; };
 		DEF44B7CCEF1A4BDB1E635DB /* EventScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26A45379FD7B14E3687E52 /* EventScreen.swift */; };
 		E19F954570A20F4F2995C371 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281EB51DB7C3D9DBCC95751 /* SignupController.swift */; };
 		E5F0A8B776B9A8567AC89B6B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCA26E1FF477CB97714D019 /* UserInfo.swift */; };
@@ -56,9 +56,10 @@
 /* Begin PBXFileReference section */
 		0281EB51DB7C3D9DBCC95751 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 		0CA9C11B57329EAFCE726660 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
-		10FF7D202A42A33200331063 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		0CF32A2D31FEF434C2F155ED /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		10FF7D202A42A33200331063 /* .swift-version */ = {isa = PBXFileReference; path = ".swift-version"; sourceTree = "<group>"; };
 		163C005F06A48579DD40D872 /* ProfileCreateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreateScreen.swift; sourceTree = "<group>"; };
-		1EB53A09C674DCC1A82309B1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1EB53A09C674DCC1A82309B1 /* .gitignore */ = {isa = PBXFileReference; path = .gitignore; sourceTree = "<group>"; };
 		28B8B5867A53C634BF8598ED /* joppy2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2App.swift; sourceTree = "<group>"; };
 		35AF7A000DBFD121CB9569A7 /* joppy2UITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = joppy2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		382F94E4DFC114C37CEC7EC1 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		B4A4282D323C976CE707E60E /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		C9C50136A3CB12261ED16664 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		CAEA2AB08978154149F812CF /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
-		D21C91B62BA5829900D43CC1 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		D9EC88FA42DEB6D981551F9E /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
 		DFBD645422CF03ACF310A9EF /* WriteArticleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteArticleScreen.swift; sourceTree = "<group>"; };
 		EA26A45379FD7B14E3687E52 /* EventScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScreen.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				C9C50136A3CB12261ED16664 /* CustomButton.swift */,
-				D21C91B62BA5829900D43CC1 /* Header.swift */,
+				0CF32A2D31FEF434C2F155ED /* Header.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -415,6 +415,7 @@
 				EB711D41776EEA2A0A3A3B7F /* CustomButton.swift in Sources */,
 				DEF44B7CCEF1A4BDB1E635DB /* EventScreen.swift in Sources */,
 				657A7590294114D7EA57F221 /* Haptics.swift in Sources */,
+				BA5819AE4AD277FFA4C7AA89 /* Header.swift in Sources */,
 				9074F3A6D2AFAA3B8D0484AC /* HomeScreen.swift in Sources */,
 				6722BAEAE5C259EDEF25A1FB /* LoginController.swift in Sources */,
 				94A62526A60F5EE426ECA24D /* LoginScreen.swift in Sources */,
@@ -425,7 +426,6 @@
 				24C8A27A9C3B7614E84859BB /* ProfileScreen.swift in Sources */,
 				0B19546A334EA74545720688 /* Publisher.swift in Sources */,
 				E19F954570A20F4F2995C371 /* SignupController.swift in Sources */,
-				D21C91B72BA5829900D43CC1 /* Header.swift in Sources */,
 				9A4131CC364546E903618FF1 /* SignupScreen.swift in Sources */,
 				5C862D9D8226E30E9809F25C /* UseCouponScreen.swift in Sources */,
 				E5F0A8B776B9A8567AC89B6B /* UserInfo.swift in Sources */,
