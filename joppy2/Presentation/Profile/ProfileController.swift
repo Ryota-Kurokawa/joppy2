@@ -26,7 +26,7 @@ class ProfileController {
     }
     
     func fetchUser() async {
-        let docRef = db.collection("users").document(user.uid)
+        let docRef = db.collection("Users").document(user.uid)
         
         do {
             let document = try await docRef.getDocument()
