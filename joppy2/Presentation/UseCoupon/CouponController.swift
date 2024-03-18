@@ -27,27 +27,27 @@ class CouponController {
     }
     
     func fetchCoupon(userId: String) async throws {
-        let  docRef = db.collection("coupon").document(userId).collection("received").document()
-
+//        let  docRef = db.collection("coupon").document(userId).collection("received").document()
 //
-//        listとしてfetchできていないのでdocumentをlistに入れて取得し、それを出力させる。
+////
+////        listとしてfetchできていないのでdocumentをlistに入れて取得し、それを出力させる。
+////        
 //        
-        
-        do {
-            let document = try await docRef.getDocument()
-            if document.exists {
-                let couponData = document.data()
-                let id = couponData!["id"] as! String
-                let publishedBy = couponData!["publishedBy"] as! String
-                let disscountRate = couponData!["disscountRate"] as! Int
-                let message = couponData!["message"] as! String
-                let isUsed = couponData!["isUsed"] as! Bool
-                
-                couopon = Coupon(id: UUID(), publishedBy: publishedBy, disscountRate: disscountRate, message: message, isUsed: isUsed)
-            } else {
-                print("Document does not exist")
-            }
-        }
+//        do {
+//            let document = try await docRef.getDocument()
+//            if document.exists {
+//                let couponData = document.data()
+//                let id = couponData!["id"] as! String
+//                let publishedBy = couponData!["publishedBy"] as! String
+//                let disscountRate = couponData!["disscountRate"] as! Int
+//                let message = couponData!["message"] as! String
+//                let isUsed = couponData!["isUsed"] as! Bool
+//                
+//                couopon = Coupon(id: UUID(), publishedBy: publishedBy, disscountRate: disscountRate, message: message, isUsed: isUsed)
+//            } else {
+//                print("Document does not exist")
+//            }
+//        }
     }
     
     func fetchUserId() async {
