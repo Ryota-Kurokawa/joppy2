@@ -14,10 +14,10 @@ struct SignUpScreen: View {
     @State var signUpPassword = ""
     let controller = AuthController()
     var body: some View {
-        ZStack {
-            Color.customBackgroundColor
-                .ignoresSafeArea()
-            NavigationStack {
+        NavigationStack {
+            ZStack {
+                Color.customBackgroundColor // ここを修正
+                    .ignoresSafeArea()
                 VStack {
                     Spacer()
                         .frame(height: 100)
@@ -72,7 +72,7 @@ struct SignUpScreen: View {
                             .foregroundColor(.white)
                     }
                     .frame(width: 100,height: 50)
-                    .background(Color.white)
+                    .background(Color.customRedColor)
                     .cornerRadius(15.0)
                     .alert(isPresented: $isSignUpAlertShown) {
                         Alert(title: Text("Sign Up Failed"), message: Text("Please try again"), dismissButton: .default(Text("OK")))
