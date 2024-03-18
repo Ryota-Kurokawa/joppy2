@@ -54,7 +54,7 @@ struct UseCouponScreen: View {
                                 Text("クーポン発行")
                                     .fontWeight(.semibold)
                                     .foregroundColor(.white)
-                                    .frame(width: 140, height: 70)
+                                    .frame(width: 170, height: 90)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 15)
                                             .stroke(Color.white, lineWidth: 2)

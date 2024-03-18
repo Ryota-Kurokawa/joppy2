@@ -18,7 +18,7 @@ struct DetailScreen: View {
                 .ignoresSafeArea()
             VStack {
                 Text("Coupon Detail")
-                    .font(.custom("AvenirNext-Heavy", size: 40))
+                    .font(.custom("AvenirNext-Heavy", size: 50))
                     .fontWeight(.bold)
                     .foregroundColor(Color.customBlackColor)
                 Spacer()
