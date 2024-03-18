@@ -14,18 +14,24 @@ struct SignUpScreen: View {
     @State var signUpPassword = ""
     let controller = AuthController()
     var body: some View {
-        NavigationStack {
-            ScrollView {
+        ZStack {
+            Color.customBackgroundColor
+                .ignoresSafeArea()
+            NavigationStack {
                 VStack {
                     Spacer()
                         .frame(height: 100)
                     Text("Joppy")
-                        .font(.largeTitle)
+                        .font(.custom("AvenirNext-Heavy", size: 60))
                         .fontWeight(.bold)
+                        .foregroundColor(.white)
                     Spacer()
                         .frame(height: 100)
                     HStack {
                         Text("email")
+                            .font(.custom("AvenirNext-Heavy", size: 20))
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
                         Spacer()
                     }
                     .padding(.horizontal)
@@ -36,6 +42,9 @@ struct SignUpScreen: View {
                         .frame(height: 80)
                     HStack {
                         Text("password")
+                            .font(.custom("AvenirNext-Heavy", size: 20))
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
                         Spacer()
                     }.padding(.horizontal)
                     TextField("type your password", text: $signUpPassword)
@@ -57,11 +66,14 @@ struct SignUpScreen: View {
                         }
                     }) {
                         Text("Sign Up")
+                            .fontWeight(.semibold)
+                            .font(.custom("Helvetica", size: 20))
                             .padding()
-                            .background(Color.blue)
                             .foregroundColor(.white)
-                            .cornerRadius(10)
                     }
+                    .frame(width: 100,height: 50)
+                    .background(Color.customAccentColor)
+                    .cornerRadius(15.0)
                     .alert(isPresented: $isSignUpAlertShown) {
                         Alert(title: Text("Sign Up Failed"), message: Text("Please try again"), dismissButton: .default(Text("OK")))
                     }
@@ -74,6 +86,7 @@ struct SignUpScreen: View {
 
                     Spacer()
                 }
+                .offset(x: 0, y: -50)
             }
         }
     }
