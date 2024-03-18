@@ -14,65 +14,94 @@ struct SendCoupon: View {
     @State private var message: String = ""
     @State private var isShowAlert = false
     @Environment(\.dismiss) private var dismiss
-    
+    @FocusState var isFocused: Bool
+
     var body: some View {
-        VStack {
-            Text("Send Coupon")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Spacer()
-                .frame(height: 100)
-            HStack {
-                Text("Send To")
-                Spacer()
-            }
-            .padding(.horizontal)
-            TextField("@joppy", text: $sendToUserId)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal)
-            Spacer()
-                .frame(height: 80)
-            HStack {
-                Text("Disscount Rate(円)")
-                Spacer()
-            }
-            .padding(.horizontal)
-            TextField("100円", value: $disscountRate, format: .number)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal)
-            Spacer()
-                .frame(height: 80)
-            HStack {
-                Text("Message")
-                Spacer()
-            }
-            .padding(.horizontal)
-            TextField("Message For Writer", text: $message)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal)
-            Spacer()
-                .frame(height: 80)
-            Button(action: {
-                // Send Coupon
-                Task {
-                    do {
-                        try await controller.sendCoupon(sendToUserId: sendToUserId, disscountRate: disscountRate, message: message)
-                        dismiss()
-                    } catch {
-                        isShowAlert.toggle()
-                    }
+        ZStack {
+            Color.clear
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    // テキストフィールドからフォーカスを外す
+                    isFocused = false
                 }
-            }) {
-                Text("Send")
-                    .font(.title)
+            VStack {
+                Text("Send Coupon")
+                    .font(.custom("AvenirNext-Heavy", size: 50))
                     .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .frame(width: 200, height: 50)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-            }
-            .alert(isPresented: $isShowAlert) {
-                Alert(title: Text("Failed to Send Coupon"))
+                    .foregroundColor(Color.customBlackColor)
+                    .padding(.top, 30)
+                    .padding(.bottom, 10)
+                Spacer()
+                    .frame(height: 100)
+                HStack {
+                    Text("Send To")
+                        .fontWeight(.semibold)
+                        .font(.custom("Helvetica", size: 20))
+                        .foregroundColor(Color.customBlackColor)
+                        .padding(.leading, -170)
+                    Spacer()
+                }
+                .padding(.horizontal)
+                TextField("@joppy", text: $sendToUserId)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+                Spacer()
+                    .frame(height: 80)
+                HStack {
+                    Text("Disscount Rate(円)")
+                        .fontWeight(.semibold)
+                        .font(.custom("Helvetica", size: 20))
+                        .foregroundColor(Color.customBlackColor)
+                        .padding(.leading, -170)
+                    Spacer()
+                }
+                .padding(.horizontal)
+                TextField("100円", value: $disscountRate, format: .number)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+                Spacer()
+                    .frame(height: 80)
+                HStack {
+                    Text("Message")
+                        .fontWeight(.semibold)
+                        .font(.custom("Helvetica", size: 20))
+                        .foregroundColor(Color.customBlackColor)
+                        .padding(.leading, -170)
+                    Spacer()
+                }
+                .padding(.horizontal)
+                TextField("Message For Writer", text: $message)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+                Spacer()
+                    .frame(height: 80)
+                Button(action: {
+                    // Send Coupon
+                    Task {
+                        do {
+                            try await controller.sendCoupon(sendToUserId: sendToUserId, disscountRate: disscountRate, message: message)
+                            dismiss()
+                        } catch {
+                            isShowAlert.toggle()
+                        }
+                    }
+                }) {
+                    Text("投稿")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 100, height: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.white, lineWidth: 2)
+                        )
+                }
+                .frame(width: 100,height: 50)
+                .background(Color.customRedColor)
+                .cornerRadius(15.0)
+                .alert(isPresented: $isShowAlert) {
+                    Alert(title: Text("Failed to Send Coupon"))
+                }
+                Spacer()
             }
         }
     }
