@@ -14,43 +14,50 @@ struct UseCouponScreen: View {
     @State private var couponList:[Coupon] = []
     
     var body: some View {
-        VStack {
-            Text("Coupon")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            List {
-                ForEach(couponList) { coupon in
-                    VStack {
-                        HStack {
-                            Text("Disscount Rate")
-                            Spacer()
-                            Text("\(coupon.disscountRate)円")
-                        }
-                        HStack {
-                            Text("Message")
-                            Spacer()
-                            Text(coupon.message)
+        NavigationStack {
+            VStack {
+                Text("Coupon")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                List {
+                    ForEach(couponList) { coupon in
+                        NavigationLink(destination: DetailScreen(coupon: coupon)){
+                            VStack {
+                                HStack {
+                                    Text("Disscount Rate")
+                                    Spacer()
+                                    Text("\(coupon.disscountRate)円")
+                                }
+                                HStack {
+                                    Text("Message")
+                                    Spacer()
+                                    Text(coupon.message)
+                                }
+                                Text(coupon.id.uuidString)
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
+                            }
                         }
                     }
                 }
-            }
-            ZStack {
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        isPresented.toggle()
-                    }) {
-                        Image(systemName: "paperplane")
+                ZStack {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            isPresented.toggle()
+                        }) {
+                            Image(systemName: "paperplane")
+                        }
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .sheet(isPresented: $isPresented, content: {
+                            SendCoupon()
+                        })
+                        Spacer()
+                            .frame(width: 20)
                     }
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .sheet(isPresented: $isPresented, content: {
-                        SendCoupon()
-                    })
-                    Spacer()
-                        .frame(width: 20)
                 }
             }
         }
@@ -58,7 +65,6 @@ struct UseCouponScreen: View {
             Task {
                 await controller.fetchUserId()
                 receivedUser = controller.receivedUser
-                couponList = []
                 do {
                     try await controller.fetchCoupon(userId: receivedUser.userId)
                     couponList = controller.couponList

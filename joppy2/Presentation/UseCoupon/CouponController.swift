@@ -18,9 +18,11 @@ class CouponController {
     
     
     func sendCoupon(sendToUserId: String, disscountRate: Int, message: String) async throws {
-        let docRef = db.collection("Coupon").document(sendToUserId).collection("received").document()
+        let couponUid = UUID()
+        let docRef = db.collection("Coupon").document(sendToUserId).collection("received").document(couponUid.uuidString)
+
         
-        let coupon = Coupon(id: UUID(), publishedBy: user.uid, disscountRate: disscountRate, message: message, isUsed: false)
+        let coupon = Coupon(id: couponUid, publishedBy: user.uid, disscountRate: disscountRate, message: message, isUsed: false)
         
         do {
             try docRef.setData(from: coupon)
@@ -28,11 +30,8 @@ class CouponController {
     }
     
     func fetchCoupon(userId: String) async throws {
-        let  docRef = db.collection("Coupon").document(userId).collection("received")
-
-//
-//        listとしてfetchできていないのでdocumentをlistに入れて取得し、それを出力させる。
-//        
+        couponList = []
+        let  docRef = db.collection("Coupon").document(userId).collection("received").whereField("isUsed", isEqualTo: false)
         do {
             let couponSnapshot = try await docRef.getDocuments()
             for document in couponSnapshot.documents {
@@ -45,25 +44,8 @@ class CouponController {
                 
                 couopon = Coupon(id: UUID(), publishedBy: publishedBy, disscountRate: disscountRate, message: message, isUsed: isUsed)
                 couponList.append(couopon)
-                print(couponList)
             }
         }
-        
-//        do {
-//            let document = try await docRef.getDocument()
-//            if document.exists {
-//                let couponData = document.data()
-//                let id = couponData!["id"] as! String
-//                let publishedBy = couponData!["publishedBy"] as! String
-//                let disscountRate = couponData!["disscountRate"] as! Int
-//                let message = couponData!["message"] as! String
-//                let isUsed = couponData!["isUsed"] as! Bool
-//                
-//                couopon = Coupon(id: UUID(), publishedBy: publishedBy, disscountRate: disscountRate, message: message, isUsed: isUsed)
-//            } else {
-//                print("Document does not exist")
-//            }
-//        }
     }
     
     func fetchUserId() async {
@@ -87,4 +69,12 @@ class CouponController {
         }
     }
     
+    func useCoupon(couponId: String) async throws {
+        let docRef = db.collection("Coupon").document(user.uid).collection("received").document(couponId)
+        do {
+            try await docRef.delete()
+        } catch {
+            print("Error removing document: \(error)")
+        }
+    }
 }
