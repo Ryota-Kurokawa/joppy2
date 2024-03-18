@@ -16,6 +16,7 @@ struct ProfileEditScreen: View {
     @State private var userId = ""
     @State private var isCreateProfile = false
     @State private var isShowAlert = false
+    @FocusState var isFocused: Bool
     let db = Firestore.firestore()
     let controller = ProfileController()
     
@@ -24,6 +25,12 @@ struct ProfileEditScreen: View {
             ZStack {
                 Color.customBackgroundColor
                     .ignoresSafeArea()
+                Color.clear
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        // テキストフィールドからフォーカスを外す
+                        isFocused = false
+                    }
                 VStack {
                     Spacer()
                         .frame(height: 100)
@@ -44,6 +51,7 @@ struct ProfileEditScreen: View {
                     TextField("type your displayed", text: $name)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal)
+                        .focused($isFocused)
                     Spacer()
                         .frame(height: 80)
                     HStack {
@@ -57,6 +65,7 @@ struct ProfileEditScreen: View {
                     TextField("About You", text: $discription)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal)
+                        .focused($isFocused)
                     Spacer()
                         .frame(height: 80)
                     Button(action: {

@@ -12,12 +12,19 @@ struct SignUpScreen: View {
     @State var isSignInAlertShown = false
     @State var signUpEmail = ""
     @State var signUpPassword = ""
+    @FocusState var isFocused: Bool
     let controller = AuthController()
     var body: some View {
         NavigationStack {
             ZStack {
                 Color.customBackgroundColor // ここを修正
                     .ignoresSafeArea()
+                Color.clear
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        // テキストフィールドからフォーカスを外す
+                        isFocused = false
+                    }
                 VStack {
                     Spacer()
                         .frame(height: 100)
@@ -38,6 +45,7 @@ struct SignUpScreen: View {
                     TextField("type your email", text: $signUpEmail)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal)
+                        .focused($isFocused)
                     Spacer()
                         .frame(height: 80)
                     HStack {
@@ -50,6 +58,7 @@ struct SignUpScreen: View {
                     TextField("type your password", text: $signUpPassword)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal)
+                        .focused($isFocused)
                     Spacer()
                         .frame(height: 120)
                     Button(action: {

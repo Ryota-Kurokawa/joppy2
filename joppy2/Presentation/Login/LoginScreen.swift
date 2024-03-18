@@ -18,7 +18,13 @@ struct LoginScreen: View {
         NavigationStack {
             ZStack {
                 Color.customBackgroundColor
-                                 .ignoresSafeArea()
+                    .ignoresSafeArea()
+                Color.clear
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        // テキストフィールドからフォーカスを外す
+                        isFocused = false
+                    }
                 VStack {
                     Spacer()
                         .frame(height: 100)
