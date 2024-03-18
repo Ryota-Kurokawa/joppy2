@@ -20,6 +20,7 @@ class CouponController {
     func sendCoupon(sendToUserId: String, disscountRate: Int, message: String) async throws {
         let couponUid = UUID()
         let docRef = db.collection("Coupon").document(sendToUserId).collection("received").document(couponUid.uuidString)
+
         
         let coupon = Coupon(id: couponUid, publishedBy: user.uid, disscountRate: disscountRate, message: message, isUsed: false)
         
@@ -35,7 +36,7 @@ class CouponController {
             let couponSnapshot = try await docRef.getDocuments()
             for document in couponSnapshot.documents {
                 let couponData = document.data()
-                let id = couponData["id"] as! String
+                _ = couponData["id"] as! String
                 let publishedBy = couponData["publishedBy"] as! String
                 let disscountRate = couponData["disscountRate"] as! Int
                 let message = couponData["message"] as! String
