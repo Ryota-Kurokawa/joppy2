@@ -42,8 +42,7 @@ struct EventScreen: View {
                         case .toC:
                             HeldScreen()
                         case .toB:
-                            EditButton(isShowSheet: $isShowSheet)
-
+                            Text("ああああ")
                         }
                     }
                     .animation(.easeInOut, value: eventFieldTypes)
