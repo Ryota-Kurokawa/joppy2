@@ -29,7 +29,7 @@ struct EventScreen: View {
                     Text("Joppy")
                         .font(.custom("AvenirNext-Heavy", size: 60))
                         .fontWeight(.bold)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color.customBlackColor)
                         .padding(.top,30)
                     Picker("TextFieldStyle", selection: $eventFieldTypes) {
                         Text("参加したい！").tag(EventFieldTypes.toC)
