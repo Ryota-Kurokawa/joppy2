@@ -24,10 +24,13 @@ struct EventScreen: View {
     var body: some View {
         NavigationStack {
             VStack {
+                
+                Header()
+                
                 Text("Joppy")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .padding(.vertical, 40)
+                    .padding(.top, 20)
                 Picker("TextFieldStyle", selection: $eventFieldTypes) {
                     Text("参加したい!").tag(EventFieldTypes.toC)
                     Text("開催したい！").tag(EventFieldTypes.toB)

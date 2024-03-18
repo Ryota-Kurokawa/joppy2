@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		3BB601E32BA67D7400C95E17 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB601E02BA67BB200C95E17 /* EventViewModel.swift */; };
 		3BB601E42BA67D7700C95E17 /* EventElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB601E12BA67BB200C95E17 /* EventElement.swift */; };
 		4C8104FE47B39C9B2A3E61D4 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEA2AB08978154149F812CF /* Coupon.swift */; };
+		593BEBFB0EBBF0C01AD64030 /* OrganizationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439D8E71250128A00D98482A /* OrganizationScreen.swift */; };
 		5C203FB587DE12E6D5356C0E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9E59B9877D92651C24A16523 /* FirebaseFirestore */; };
 		5C862D9D8226E30E9809F25C /* UseCouponScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB9588D0FB978C7F325432 /* UseCouponScreen.swift */; };
 		5E3C65108641E47521F871B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D468CCE09E707764766DDFB /* Preview Assets.xcassets */; };
@@ -30,6 +31,8 @@
 		6722BAEAE5C259EDEF25A1FB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307E4A8F165A20AEB8C645E /* LoginController.swift */; };
 		7C2787BA96F21E7D5CCA2471 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AAEB10DD03C053F62DDB30DF /* FirebaseAuth */; };
 		831C22DAA9872F3F56328229 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E97777F216FE4388A49B6 /* AuthViewModel.swift */; };
+		8FAED91D0946135B4E760193 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9C11B57329EAFCE726660 /* ProfileController.swift */; };
+		9074F3A6D2AFAA3B8D0484AC /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4548B3A3883EDE9A363813D4 /* HomeScreen.swift */; };
 		94A62526A60F5EE426ECA24D /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382F94E4DFC114C37CEC7EC1 /* LoginScreen.swift */; };
 		9A4131CC364546E903618FF1 /* SignupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E8EF20EDB2325B770DABB /* SignupScreen.swift */; };
 		AB9C1B827B2422AEE93CC4CC /* project.yml in Resources */ = {isa = PBXBuildFile; fileRef = A23BADF6082DDBB13D2415D8 /* project.yml */; };
@@ -38,12 +41,9 @@
 		E5F0A8B776B9A8567AC89B6B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCA26E1FF477CB97714D019 /* UserInfo.swift */; };
 		EB711D41776EEA2A0A3A3B7F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C50136A3CB12261ED16664 /* CustomButton.swift */; };
 		EC602ED3533F0E8C63A1613E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 524666B4ACC20C5D53E09572 /* .swiftlint.yml */; };
+		ED5C81022B4B497AB47A0EED /* ProfileCreateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C005F06A48579DD40D872 /* ProfileCreateScreen.swift */; };
+		F3877D00161947B128007750 /* PersonalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0617A09FD75853EEC79BC /* PersonalScreen.swift */; };
 		FC3D961B01C3CF2D20F51AB4 /* joppy2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F740CF781C5B10D626ACC8 /* joppy2UITestsLaunchTests.swift */; };
-		FFD235B82BA481020097004D /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD235B72BA481020097004D /* HomeScreen.swift */; };
-		FFD235BA2BA492320097004D /* ProfileCreateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD235B92BA492320097004D /* ProfileCreateScreen.swift */; };
-		FFD235BC2BA4925F0097004D /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD235BB2BA4925F0097004D /* ProfileController.swift */; };
-		FFD235BE2BA4A31C0097004D /* PersonalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD235BD2BA4A31C0097004D /* PersonalScreen.swift */; };
-		FFD235C02BA4A3500097004D /* OrganizationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD235BF2BA4A3500097004D /* OrganizationScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +58,11 @@
 
 /* Begin PBXFileReference section */
 		0281EB51DB7C3D9DBCC95751 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
-		10FF7D202A42A33200331063 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
-		1EB53A09C674DCC1A82309B1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		0CA9C11B57329EAFCE726660 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		0CF32A2D31FEF434C2F155ED /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		10FF7D202A42A33200331063 /* .swift-version */ = {isa = PBXFileReference; path = ".swift-version"; sourceTree = "<group>"; };
+		163C005F06A48579DD40D872 /* ProfileCreateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreateScreen.swift; sourceTree = "<group>"; };
+		1EB53A09C674DCC1A82309B1 /* .gitignore */ = {isa = PBXFileReference; path = .gitignore; sourceTree = "<group>"; };
 		28B8B5867A53C634BF8598ED /* joppy2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2App.swift; sourceTree = "<group>"; };
 		35AF7A000DBFD121CB9569A7 /* joppy2UITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = joppy2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		382F94E4DFC114C37CEC7EC1 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -74,7 +77,7 @@
 		647E97777F216FE4388A49B6 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		652732CF594935526D307940 /* AuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
 		6DCA26E1FF477CB97714D019 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		6F3E2F14C2A2BE154A9F5AED /* joppy2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joppy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F3E2F14C2A2BE154A9F5AED /* joppy2.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = joppy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7307E4A8F165A20AEB8C645E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		83BD4BB6DDBA81C0F201698F /* joppy2Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = joppy2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EB9588D0FB978C7F325432 /* UseCouponScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCouponScreen.swift; sourceTree = "<group>"; };
@@ -91,11 +94,6 @@
 		F24B9B6DBF2B0C2C96F6B52A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F6F740CF781C5B10D626ACC8 /* joppy2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joppy2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC7A836F8A2506FD57EC098A /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
-		FFD235B72BA481020097004D /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		FFD235B92BA492320097004D /* ProfileCreateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreateScreen.swift; sourceTree = "<group>"; };
-		FFD235BB2BA4925F0097004D /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
-		FFD235BD2BA4A31C0097004D /* PersonalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalScreen.swift; sourceTree = "<group>"; };
-		FFD235BF2BA4A3500097004D /* OrganizationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				C9C50136A3CB12261ED16664 /* CustomButton.swift */,
+				0CF32A2D31FEF434C2F155ED /* Header.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -166,7 +165,7 @@
 		90B574265DDFE8C683BF6B4A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FFD235B72BA481020097004D /* HomeScreen.swift */,
+				4548B3A3883EDE9A363813D4 /* HomeScreen.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -205,11 +204,11 @@
 		A12D98290C5C2A18006AC1CF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				439D8E71250128A00D98482A /* OrganizationScreen.swift */,
+				EBB0617A09FD75853EEC79BC /* PersonalScreen.swift */,
+				0CA9C11B57329EAFCE726660 /* ProfileController.swift */,
+				163C005F06A48579DD40D872 /* ProfileCreateScreen.swift */,
 				B4A4282D323C976CE707E60E /* ProfileScreen.swift */,
-				FFD235B92BA492320097004D /* ProfileCreateScreen.swift */,
-				FFD235BB2BA4925F0097004D /* ProfileController.swift */,
-				FFD235BD2BA4A31C0097004D /* PersonalScreen.swift */,
-				FFD235BF2BA4A3500097004D /* OrganizationScreen.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -371,6 +370,9 @@
 					520B19E90182239B6BB036C6 = {
 						TestTargetID = 825C71BF811C5060C112B128;
 					};
+					825C71BF811C5060C112B128 = {
+						DevelopmentTeam = chanchrons;
+					};
 				};
 			};
 			buildConfigurationList = F1A35EF6BD588F89191BD774 /* Build configuration list for PBXProject "joppy2" */;
@@ -423,6 +425,8 @@
 				FFD235BE2BA4A31C0097004D /* PersonalScreen.swift in Sources */,
 				3B80E1EE2BA5817E0087E022 /* ParticipateScreen.swift in Sources */,
 				657A7590294114D7EA57F221 /* Haptics.swift in Sources */,
+				BA5819AE4AD277FFA4C7AA89 /* Header.swift in Sources */,
+				9074F3A6D2AFAA3B8D0484AC /* HomeScreen.swift in Sources */,
 				6722BAEAE5C259EDEF25A1FB /* LoginController.swift in Sources */,
 				94A62526A60F5EE426ECA24D /* LoginScreen.swift in Sources */,
 				3BB601E42BA67D7700C95E17 /* EventElement.swift in Sources */,
@@ -562,7 +566,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Chanchrons.joppy2;
+				PRODUCT_BUNDLE_IDENTIFIER = joppy2.joppy2;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -681,7 +685,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Chanchrons.joppy2;
+				PRODUCT_BUNDLE_IDENTIFIER = joppy2.joppy2;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
