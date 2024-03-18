@@ -17,7 +17,7 @@ class ProfileController {
     func updateProfile(userInfo: UserInfo) -> Bool {
         
         do {
-            try db.collection("users").document(user.uid).setData(from: userInfo)
+            try db.collection("Users").document(user.uid).setData(from: userInfo)
             return true
         } catch {
             print("Error writing document: \(error)")
