@@ -58,6 +58,13 @@ struct LoginScreen: View {
                         destination: SignUpScreen()
                     ) {
                         Text("新規登録")
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .frame(width: 100, height: 50)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(Color.white, lineWidth: 2)
+                            )
                     }
                     Button(action: {
                         Task {
@@ -75,7 +82,7 @@ struct LoginScreen: View {
                             .foregroundColor(.white)
                     }
                     .frame(width: 100,height: 50)
-                    .background(Color.customAccentColor)
+                    .background(Color.customRedColor)
                     .cornerRadius(15.0)
                     .fullScreenCover(isPresented: $isPresented, content: {
                         HomeScreen()

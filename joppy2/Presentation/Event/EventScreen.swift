@@ -24,7 +24,7 @@ struct EventScreen: View {
         NavigationStack {
             ZStack {
                 Color.customBackgroundColor
-                                 .ignoresSafeArea()
+                    .ignoresSafeArea()
                 VStack {
                     Text("Joppy")
                         .font(.custom("AvenirNext-Heavy", size: 60))
@@ -32,7 +32,7 @@ struct EventScreen: View {
                         .foregroundColor(.white)
                         .padding(.top,30)
                     Picker("TextFieldStyle", selection: $eventFieldTypes) {
-                        Text("参加したい!").tag(EventFieldTypes.toC)
+                        Text("参加したい！").tag(EventFieldTypes.toC)
                         Text("開催したい！").tag(EventFieldTypes.toB)
                     }
                     .pickerStyle(SegmentedPickerStyle())
@@ -40,7 +40,7 @@ struct EventScreen: View {
                     VStack {
                         switch eventFieldTypes {
                         case .toC:
-                                HeldScreen()
+                            HeldScreen()
                         case .toB:
                             EditButton(isShowSheet: $isShowSheet)
 

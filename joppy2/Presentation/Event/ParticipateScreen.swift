@@ -12,9 +12,14 @@ struct HeldScreen: View {
     @State private var typeDescription = ""
     @State private var isShowSheet = false
     var body: some View {
-        VStack{
-            List(descriptionVM.events, id: \.id) {event in
-                EventCellView(title: event.title, description: event.description, createAt: event.createAt, isMyMessage: true, customDate: event.customDate)
+        ZStack{
+            Color.customBackgroundColor
+                .ignoresSafeArea()
+            VStack{
+                List(descriptionVM.events, id: \.id) {event in
+                        EventCellView(title: event.title, description: event.description, createAt: event.createAt, isMyMessage: true, customDate: event.customDate)
+                }
+                .background(Color.customBackgroundColor)
             }
         }
     }
@@ -31,8 +36,6 @@ struct EventCellView: View {
     var body: some View {
         if isMyMessage && !title.isEmpty {
             ZStack {
-                Color.customBackgroundColor
-                    .ignoresSafeArea()
                 VStack {
                     VStack {
                         Text(title)

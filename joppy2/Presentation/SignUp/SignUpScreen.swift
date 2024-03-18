@@ -72,7 +72,7 @@ struct SignUpScreen: View {
                             .foregroundColor(.white)
                     }
                     .frame(width: 100,height: 50)
-                    .background(Color.customAccentColor)
+                    .background(Color.white)
                     .cornerRadius(15.0)
                     .alert(isPresented: $isSignUpAlertShown) {
                         Alert(title: Text("Sign Up Failed"), message: Text("Please try again"), dismissButton: .default(Text("OK")))
