@@ -21,54 +21,68 @@ struct ProfileEditScreen: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Spacer()
-                    .frame(height: 100)
-                Text("Joppy")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Spacer()
-                    .frame(height: 100)
-                HStack {
-                    Text("name")
+            ZStack {
+                Color.customBackgroundColor
+                    .ignoresSafeArea()
+                VStack {
                     Spacer()
-                }
-                .padding(.horizontal)
-                TextField("type your displayed", text: $name)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal)
-                Spacer()
-                    .frame(height: 80)
-                HStack {
-                    Text("discription")
+                        .frame(height: 100)
+                    Text("Joppy")
+                        .font(.custom("AvenirNext-Heavy", size: 60))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.customBlackColor)
                     Spacer()
-                }
-                .padding(.horizontal)
-                TextField("About You", text: $discription)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal)
-                Spacer()
-                    .frame(height: 80)
-                Button(action: {
-                    Task {
-                        if controller.updateProfile(userInfo: UserInfo(id: user.uid, name: name, userId: userId, discription: discription)) {
-                            isCreateProfile.toggle()
-                        } else {
-                            isShowAlert.toggle()
-                        }
+                        .frame(height: 100)
+                    HStack {
+                        Text("name")
+                            .fontWeight(.semibold)
+                            .font(.custom("Helvetica", size: 20))
+                            .foregroundColor(Color.customBlackColor)
+                        Spacer()
                     }
-                }) {
-                    Text("Edit Profile")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .fullScreenCover(isPresented: $isCreateProfile) {
-                    HomeScreen()
-                }
-                .alert(isPresented: $isShowAlert) {
-                    Alert(title: Text("Error"), message: Text("Failed to create profile"), dismissButton: .default(Text("OK")))
+                    .padding(.horizontal)
+                    TextField("type your displayed", text: $name)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal)
+                    Spacer()
+                        .frame(height: 80)
+                    HStack {
+                        Text("discription")
+                            .fontWeight(.semibold)
+                            .font(.custom("Helvetica", size: 20))
+                            .foregroundColor(Color.customBlackColor)
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    TextField("About You", text: $discription)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal)
+                    Spacer()
+                        .frame(height: 80)
+                    Button(action: {
+                        Task {
+                            if controller.updateProfile(userInfo: UserInfo(id: user.uid, name: name, userId: userId, discription: discription)) {
+                                isCreateProfile.toggle()
+                            } else {
+                                isShowAlert.toggle()
+                            }
+                        }
+                    }) {
+                        Text("Edit Profile")
+                            .fontWeight(.semibold)
+                            .font(.custom("Helvetica", size: 20))
+                            .padding()
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: 160,height: 70)
+                    .background(Color.customRedColor)
+                    .cornerRadius(15.0)
+                    .fullScreenCover(isPresented: $isCreateProfile) {
+                        HomeScreen()
+                    }
+                    .alert(isPresented: $isShowAlert) {
+                        Alert(title: Text("Error"), message: Text("Failed to create profile"), dismissButton: .default(Text("OK")))
+                    }
                 }
             }
         }.onAppear {

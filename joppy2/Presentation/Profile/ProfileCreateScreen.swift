@@ -38,7 +38,7 @@ struct ProfileCreateScreen: View {
                     Text("Joppy")
                         .font(.custom("AvenirNext-Heavy", size: 60))
                         .fontWeight(.bold)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color.customBlackColor)
                         .padding(.top,30)
                     Spacer()
                         .frame(height: 100)
@@ -46,7 +46,7 @@ struct ProfileCreateScreen: View {
                         Text("name")
                             .font(.custom("AvenirNext-Heavy", size: 20))
                             .fontWeight(.bold)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color.customBlackColor)
                         Spacer()
                     }
                     .padding(.horizontal)
@@ -61,7 +61,7 @@ struct ProfileCreateScreen: View {
                         Text("discription")
                             .font(.custom("AvenirNext-Heavy", size: 20))
                             .fontWeight(.bold)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color.customBlackColor)
                             .focused($isFocused)
                         Spacer()
                     }
@@ -76,7 +76,7 @@ struct ProfileCreateScreen: View {
                         Text("user id like @joppy")
                             .font(.custom("AvenirNext-Heavy", size: 20))
                             .fontWeight(.bold)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color.customBlackColor)
                         Spacer()
                     }
                     .padding(.horizontal)
@@ -96,11 +96,14 @@ struct ProfileCreateScreen: View {
                         }
                     }) {
                         Text("Create Profile")
+                            .fontWeight(.semibold)
+                            .font(.custom("Helvetica", size: 20))
                             .padding()
-                            .background(Color.blue)
                             .foregroundColor(.white)
-                            .cornerRadius(10)
                     }
+                    .frame(width: 210,height: 70)
+                    .background(Color.customRedColor)
+                    .cornerRadius(15.0)
                     .fullScreenCover(isPresented: $isCreateProfile) {
                         HomeScreen()
                     }

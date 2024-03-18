@@ -24,14 +24,14 @@ struct SignUpScreen: View {
                     Text("Joppy")
                         .font(.custom("AvenirNext-Heavy", size: 60))
                         .fontWeight(.bold)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color.customBlackColor)
                     Spacer()
                         .frame(height: 100)
                     HStack {
                         Text("email")
                             .font(.custom("AvenirNext-Heavy", size: 20))
                             .fontWeight(.bold)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color.customBlackColor)
                         Spacer()
                     }
                     .padding(.horizontal)
@@ -44,7 +44,7 @@ struct SignUpScreen: View {
                         Text("password")
                             .font(.custom("AvenirNext-Heavy", size: 20))
                             .fontWeight(.bold)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color.customBlackColor)
                         Spacer()
                     }.padding(.horizontal)
                     TextField("type your password", text: $signUpPassword)
@@ -71,7 +71,7 @@ struct SignUpScreen: View {
                             .padding()
                             .foregroundColor(.white)
                     }
-                    .frame(width: 100,height: 50)
+                    .frame(width: 180,height: 70)
                     .background(Color.customRedColor)
                     .cornerRadius(15.0)
                     .alert(isPresented: $isSignUpAlertShown) {
