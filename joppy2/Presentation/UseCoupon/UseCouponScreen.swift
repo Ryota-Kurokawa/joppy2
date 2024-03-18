@@ -15,48 +15,53 @@ struct UseCouponScreen: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Coupon")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                List {
-                    ForEach(couponList) { coupon in
-                        NavigationLink(destination: DetailScreen(coupon: coupon)){
-                            VStack {
-                                HStack {
-                                    Text("Disscount Rate")
-                                    Spacer()
-                                    Text("\(coupon.disscountRate)円")
+            ZStack {
+                Color.customBackgroundColor // ここを修正
+                    .ignoresSafeArea()
+                VStack {
+                    Text("Coupon")
+                        .font(.custom("AvenirNext-Heavy", size: 60))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.customBlackColor)
+                    List {
+                        ForEach(couponList) { coupon in
+                            NavigationLink(destination: DetailScreen(coupon: coupon)){
+                                VStack {
+                                    HStack {
+                                        Text("Disscount Rate")
+                                        Spacer()
+                                        Text("\(coupon.disscountRate)円")
+                                    }
+                                    HStack {
+                                        Text("Message")
+                                        Spacer()
+                                        Text(coupon.message)
+                                    }
+                                    Text(coupon.id.uuidString)
+                                        .font(.caption)
+                                        .foregroundColor(.gray)
                                 }
-                                HStack {
-                                    Text("Message")
-                                    Spacer()
-                                    Text(coupon.message)
-                                }
-                                Text(coupon.id.uuidString)
-                                    .font(.caption)
-                                    .foregroundColor(.gray)
                             }
                         }
                     }
-                }
-                ZStack {
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            isPresented.toggle()
-                        }) {
-                            Image(systemName: "paperplane")
+                    ZStack {
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                isPresented.toggle()
+                            }) {
+                                Image(systemName: "paperplane")
+                            }
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            .sheet(isPresented: $isPresented, content: {
+                                SendCoupon()
+                            })
+                            Spacer()
+                                .frame(width: 20)
                         }
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .sheet(isPresented: $isPresented, content: {
-                            SendCoupon()
-                        })
-                        Spacer()
-                            .frame(width: 20)
                     }
                 }
             }
