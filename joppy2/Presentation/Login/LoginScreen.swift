@@ -11,7 +11,7 @@ struct LoginScreen: View {
     @State var isPresented = false
     @State var isAlertShown = false
     @State var logInEmail = "Erika@gmail.com"
-    @State var logInPassword = "Password"
+    @State var logInPassword = "Password1234"
     @FocusState var isFocused: Bool
     let controller = LoginController()
     var body: some View {

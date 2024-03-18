@@ -77,7 +77,6 @@ struct SignUpScreen: View {
                         Text("Sign Up")
                             .fontWeight(.semibold)
                             .font(.custom("Helvetica", size: 20))
-                            .padding()
                             .foregroundColor(.white)
                     }
                     .frame(width: 180,height: 70)

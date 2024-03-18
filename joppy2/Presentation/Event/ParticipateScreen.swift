@@ -21,6 +21,8 @@ struct HeldScreen: View {
                 }
                 .background(Color.customBackgroundColor)
             }
+            EditButton(isShowSheet: $isShowSheet)
+                .offset(x: 130, y: 180)
         }
     }
 }

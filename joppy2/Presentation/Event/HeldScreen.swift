@@ -18,14 +18,14 @@ struct EditButton: View {
         Button {
             isShowSheet.toggle()
         } label: {
-            Text("イベント作成")
-                .foregroundStyle(.white)
+            Image(systemName: "pencil")
                 .fontWeight(.semibold)
-                .frame(width: 300, height: 120)
-                .background(.orange)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .shadow(color: .gray, radius: 3, x: 3, y: 3)
+                .foregroundColor(.white)
         }
+        .frame(width: 60,height: 60)
+        .background(Color.customRedColor)
+        .cornerRadius(30.0)
+        .shadow(color: .gray, radius: 3, x: 3, y: 3)
         .sheet(isPresented: $isShowSheet){
             EditView(isShowSheet: $isShowSheet)
         }
