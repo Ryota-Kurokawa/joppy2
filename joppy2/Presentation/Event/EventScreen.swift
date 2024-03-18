@@ -27,10 +27,10 @@ struct EventScreen: View {
                     .ignoresSafeArea()
                 VStack {
                     Text("Joppy")
-                        .font(.custom("AvenirNext-Heavy", size: 60))
+                        .padding(.top,30)
+                        .font(.custom("AvenirNext-Heavy", size: 40))
                         .fontWeight(.bold)
                         .foregroundColor(Color.customBlackColor)
-                        .padding(.top,30)
                     Picker("TextFieldStyle", selection: $eventFieldTypes) {
                         Text("参加したい！").tag(EventFieldTypes.toC)
                         Text("開催したい！").tag(EventFieldTypes.toB)

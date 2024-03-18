@@ -33,13 +33,11 @@ struct ProfileEditScreen: View {
                     }
                 VStack {
                     Spacer()
-                        .frame(height: 100)
-                    Text("Joppy")
-                        .font(.custom("AvenirNext-Heavy", size: 60))
+                    Text("プロフィール編集")
+                        .font(.custom("AvenirNext-Heavy", size: 30))
                         .fontWeight(.bold)
                         .foregroundColor(Color.customBlackColor)
                     Spacer()
-                        .frame(height: 100)
                     HStack {
                         Text("name")
                             .fontWeight(.semibold)
