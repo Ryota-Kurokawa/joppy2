@@ -16,6 +16,8 @@ disabled_rules:
     - type_body_length
     - line_length
     - vertical_parameter_alignment
+    - force_cast
+    - multiple_closures_with_trailing_closure
 
 # ここでは変数名の最低の長さを 1 に指定
 identifier_name:
