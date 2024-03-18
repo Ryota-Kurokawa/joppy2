@@ -12,3 +12,4 @@ struct Publisher: Codable, Identifiable {
     let publisherName: String
     let member: [UserInfo]
 }
+

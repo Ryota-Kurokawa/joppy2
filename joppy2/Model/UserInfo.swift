@@ -10,5 +10,6 @@ import Foundation
 struct UserInfo: Codable, Identifiable {
     let id: String
     let name: String
-    var havingCouponIds: [Coupon.ID]
+    let userId: String
+    let discription: String
 }

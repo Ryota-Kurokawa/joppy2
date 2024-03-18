@@ -9,7 +9,15 @@ import SwiftUI
 
 struct OrganizationScreen: View {
     var body: some View {
-        Text("Organizaion")
+        VStack {
+            Text("Organizaion")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            Spacer()
+            Text("Comming Soon")
+                .font(.title)
+            Spacer()
+        }
     }
 }
 
