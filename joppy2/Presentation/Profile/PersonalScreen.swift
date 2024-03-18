@@ -47,6 +47,7 @@ struct PersonalScreen: View {
                 NavigationLink(destination: ProfileEditScreen()) {
                     Text("編集する")
                         .foregroundColor(.white)
+                        .fontWeight(.semibold)
                         .frame(width: 100, height: 50)
                         .background(Color.customRedColor)
                         .cornerRadius(15)

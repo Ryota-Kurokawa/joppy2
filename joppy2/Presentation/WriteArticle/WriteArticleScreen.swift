@@ -26,7 +26,7 @@ struct WriteArticleScreen: View {
         ScrollView {
                 VStack {
                     Text("Write Article")
-                        .font(.custom("AvenirNext-Heavy", size: 30))
+                        .font(.custom("AvenirNext-Heavy", size: 50))
                         .fontWeight(.bold)
                         .foregroundColor(Color.customBlackColor)
                         .padding(.top, 30)
@@ -88,6 +88,7 @@ struct WriteArticleScreen: View {
                                 .frame(width: 20)
                         }
                     }
+                    Spacer()
                 }
             }
         }

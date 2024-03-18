@@ -20,9 +20,10 @@ struct UseCouponScreen: View {
                     .ignoresSafeArea()
                 VStack {
                     Text("Coupon")
-                        .font(.custom("AvenirNext-Heavy", size: 60))
+                        .font(.custom("AvenirNext-Heavy", size: 50))
                         .fontWeight(.bold)
                         .foregroundColor(Color.customBlackColor)
+                        .padding(.top,30)
                     List {
                         ForEach(couponList) { coupon in
                             NavigationLink(destination: DetailScreen(coupon: coupon)){
@@ -63,6 +64,7 @@ struct UseCouponScreen: View {
                                 .frame(width: 20)
                         }
                     }
+                    Spacer()
                 }
             }
         }

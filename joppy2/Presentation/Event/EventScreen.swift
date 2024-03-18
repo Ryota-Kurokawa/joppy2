@@ -26,8 +26,9 @@ struct EventScreen: View {
                 Color.customBackgroundColor
                     .ignoresSafeArea()
                 VStack {
-                    Text("Joppy")
-                        .font(.custom("AvenirNext-Heavy", size: 60))
+                    Text("Event")
+                        .foregroundColor(Color.customBlackColor)
+                        .font(.custom("AvenirNext-Heavy", size: 50))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .padding(.top,30)
@@ -36,16 +37,16 @@ struct EventScreen: View {
                         Text("開催したい！").tag(EventFieldTypes.toB)
                     }
                     .pickerStyle(SegmentedPickerStyle())
-                    .padding()
+                    Spacer()
                     VStack {
                         switch eventFieldTypes {
                         case .toC:
                             HeldScreen()
                         case .toB:
-                            EditButton(isShowSheet: $isShowSheet)
-
+                            Text("参加したい")
                         }
                     }
+                    .frame(width: 360, height: 440)
                     .animation(.easeInOut, value: eventFieldTypes)
                     Spacer()
                 }
