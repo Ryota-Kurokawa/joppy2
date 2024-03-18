@@ -51,12 +51,18 @@ struct UseCouponScreen: View {
                             Button(action: {
                                 isPresented.toggle()
                             }) {
-                                Image(systemName: "paperplane")
+                                Text("クーポン発行")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                                    .frame(width: 140, height: 70)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.white, lineWidth: 2)
+                                    )
                             }
-                            .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                            .frame(width: 100,height: 50)
+                            .background(Color.customRedColor)
+                            .cornerRadius(15.0)
                             .sheet(isPresented: $isPresented, content: {
                                 SendCoupon()
                             })
