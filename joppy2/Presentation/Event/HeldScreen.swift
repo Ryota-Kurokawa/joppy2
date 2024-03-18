@@ -18,14 +18,14 @@ struct EditButton: View {
         Button {
             isShowSheet.toggle()
         } label: {
-            Text("イベント作成")
-                .foregroundStyle(.white)
+            Image(systemName: "pencil")
                 .fontWeight(.semibold)
-                .frame(width: 300, height: 120)
-                .background(.orange)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .shadow(color: .gray, radius: 3, x: 3, y: 3)
+                .foregroundColor(.white)
         }
+        .frame(width: 60,height: 60)
+        .background(Color.customRedColor)
+        .cornerRadius(30.0)
+        .shadow(color: .gray, radius: 3, x: 3, y: 3)
         .sheet(isPresented: $isShowSheet){
             EditView(isShowSheet: $isShowSheet)
         }
@@ -64,8 +64,10 @@ struct EditView: View {
                         displayedComponents: [.date, .hourAndMinute] // 日付と時刻の選択を可能にする
                     )
                     .padding()
-            TextField("タイトル", text: $typeTitle)
-                .focused($isEditControll)
+            Form {
+                TextField("タイトル", text: $typeTitle)
+                    .focused($isEditControll)
+            }
                 .onTapGesture {
                     isEditControll = false
                 }
@@ -73,8 +75,10 @@ struct EditView: View {
                 .frame(width: 355,height: 40)
                 .padding(.all)
 
-            TextEditor(text: $typeDescription)
-                .focused($isEditControll)
+            Form {
+                TextEditor(text: $typeDescription)
+                    .focused($isEditControll)
+            }
                 .onTapGesture {
                     isEditControll = false//フォーカス解除
                 }
@@ -88,25 +92,7 @@ struct EditView: View {
 
         }
         .padding(.all)
-//        .offset(x: 0, y: keyboardHeight / 2) // キーボードの高さに応じてオフセット調整
-//        .onAppear {
-//                    self.registerKeyboardNotifications()
-//                }
-//                .onDisappear {
-//                    NotificationCenter.default.removeObserver(self)
-//                }
     }
-//    // キーボードの表示・非表示を監視するためのメソッド
-//       private func registerKeyboardNotifications() {
-//           NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { notification in
-//               guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-//               self.keyboardHeight = keyboardFrame.height
-//           }
-//
-//           NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { _ in
-//               self.keyboardHeight = 0
-//           }
-//       }
 }
 
 

@@ -12,35 +12,53 @@ struct SignUpScreen: View {
     @State var isSignInAlertShown = false
     @State var signUpEmail = ""
     @State var signUpPassword = ""
+    @FocusState var isFocused: Bool
     let controller = AuthController()
     var body: some View {
         NavigationStack {
-            ScrollView {
+            ZStack {
+                Color.customBackgroundColor // ここを修正
+                    .ignoresSafeArea()
+                Color.clear
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        // テキストフィールドからフォーカスを外す
+                        isFocused = false
+                    }
                 VStack {
                     Spacer()
                         .frame(height: 100)
                     Text("Joppy")
-                        .font(.largeTitle)
+                        .font(.custom("AvenirNext-Heavy", size: 60))
                         .fontWeight(.bold)
+                        .foregroundColor(Color.customBlackColor)
                     Spacer()
                         .frame(height: 100)
                     HStack {
                         Text("email")
+                            .font(.custom("AvenirNext-Heavy", size: 20))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.customBlackColor)
                         Spacer()
                     }
                     .padding(.horizontal)
                     TextField("type your email", text: $signUpEmail)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal)
+                        .focused($isFocused)
                     Spacer()
                         .frame(height: 80)
                     HStack {
                         Text("password")
+                            .font(.custom("AvenirNext-Heavy", size: 20))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.customBlackColor)
                         Spacer()
                     }.padding(.horizontal)
                     TextField("type your password", text: $signUpPassword)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal)
+                        .focused($isFocused)
                     Spacer()
                         .frame(height: 120)
                     Button(action: {
@@ -57,11 +75,13 @@ struct SignUpScreen: View {
                         }
                     }) {
                         Text("Sign Up")
-                            .padding()
-                            .background(Color.blue)
+                            .fontWeight(.semibold)
+                            .font(.custom("Helvetica", size: 20))
                             .foregroundColor(.white)
-                            .cornerRadius(10)
                     }
+                    .frame(width: 180,height: 70)
+                    .background(Color.customRedColor)
+                    .cornerRadius(15.0)
                     .alert(isPresented: $isSignUpAlertShown) {
                         Alert(title: Text("Sign Up Failed"), message: Text("Please try again"), dismissButton: .default(Text("OK")))
                     }
@@ -74,6 +94,7 @@ struct SignUpScreen: View {
 
                     Spacer()
                 }
+                .offset(x: 0, y: -60)
             }
         }
     }

@@ -22,29 +22,33 @@ struct ProfileScreen: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Joppy")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.vertical, 40)
-                Picker("TextFieldStyle", selection: $profileFieldTypes) {
-                    Text("個人").tag(ProfileFieldTypes.individual)
-                    Text("organization").tag(ProfileFieldTypes.organization)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
+            ZStack {
+                Color.customBackgroundColor
+                    .ignoresSafeArea()
                 VStack {
-                    switch profileFieldTypes {
-                    case .individual:
-                        PersonalScreen()
-                    case .organization:
-                        OrganizationScreen()
+                    Text("Joppy")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(.vertical, 40)
+                    Picker("TextFieldStyle", selection: $profileFieldTypes) {
+                        Text("個人").tag(ProfileFieldTypes.individual)
+                        Text("organization").tag(ProfileFieldTypes.organization)
                     }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding()
+                    VStack {
+                        switch profileFieldTypes {
+                        case .individual:
+                            PersonalScreen()
+                        case .organization:
+                            OrganizationScreen()
+                        }
+                    }
+                    .animation(.easeInOut, value: profileFieldTypes)
+                    Spacer()
                 }
-                .animation(.easeInOut, value: profileFieldTypes)
-                Spacer()
             }
-        }
+            }
     }
 }
 

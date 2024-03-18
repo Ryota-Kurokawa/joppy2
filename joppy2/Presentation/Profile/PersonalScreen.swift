@@ -13,28 +13,42 @@ struct PersonalScreen: View {
     private let user = Auth.auth().currentUser!
     private let controller = ProfileController()
     private let db = Firestore.firestore()
+    @FocusState var isFocused: Bool
     @State var userInfo: UserInfo = UserInfo(id: "", name: "", userId: "", discription: "")
     
     var body: some View {
-        VStack {
-            Text("Personal")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Text(userInfo.name)
-            Text(userInfo.discription)
-            Text(userInfo.userId)
-            Spacer()
-            HStack {
+        ZStack {
+            Color.customBackgroundColor
+                .ignoresSafeArea()
+            VStack {
+                Text("Personal")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                Text(userInfo.name)
+                    .font(.custom("AvenirNext-Heavy", size: 20))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.customBlackColor)
+                Text(userInfo.discription)
+                    .font(.custom("AvenirNext-Heavy", size: 20))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.customBlackColor)
+                Text(userInfo.userId)
+                    .font(.custom("AvenirNext-Heavy", size: 20))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.customBlackColor)
                 Spacer()
-                NavigationLink(destination: ProfileEditScreen()) {
-                    Image(systemName: "pencil")
-                        .frame(height: 60)
-                        .frame(width: 60)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(30)
-                        .padding(.horizontal, 15)
-                        .shadow(radius: 10)
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: ProfileEditScreen()) {
+                        Image(systemName: "pencil")
+                            .frame(height: 60)
+                            .frame(width: 60)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(30)
+                            .padding(.horizontal, 15)
+                            .shadow(radius: 10)
+                    }
                 }
             }
         }
@@ -44,6 +58,7 @@ struct PersonalScreen: View {
                 self.userInfo = controller.userInfo
             }
         }
+        .background(Color.customBackgroundColor)
     }
 }
 #Preview {

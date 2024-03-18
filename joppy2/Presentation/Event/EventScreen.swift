@@ -22,34 +22,33 @@ struct EventScreen: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
-                
-                Header()
-                
-                Text("Joppy")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.top, 20)
-                Picker("TextFieldStyle", selection: $eventFieldTypes) {
-                    Text("参加したい!").tag(EventFieldTypes.toC)
-                    Text("開催したい！").tag(EventFieldTypes.toB)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
+            ZStack {
+                Color.customBackgroundColor
+                    .ignoresSafeArea()
                 VStack {
-                    switch eventFieldTypes {
-                    case .toC:
-                        VStack {
-                            Text("イベント一覧")
-                            HeldScreen()
-                        }
-                    case .toB:
-                        EditButton(isShowSheet: $isShowSheet)
-
+                    Text("Joppy")
+                        .font(.custom("AvenirNext-Heavy", size: 60))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(.top,30)
+                    Picker("TextFieldStyle", selection: $eventFieldTypes) {
+                        Text("参加したい！").tag(EventFieldTypes.toC)
+                        Text("開催したい！").tag(EventFieldTypes.toB)
                     }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding()
+                    VStack {
+                        switch eventFieldTypes {
+                        case .toC:
+                            HeldScreen()
+                        case .toB:
+                            EditButton(isShowSheet: $isShowSheet)
+
+                        }
+                    }
+                    .animation(.easeInOut, value: eventFieldTypes)
+                    Spacer()
                 }
-                .animation(.easeInOut, value: eventFieldTypes)
-                Spacer()
             }
         }
     }

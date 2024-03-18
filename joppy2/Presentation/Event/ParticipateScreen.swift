@@ -12,10 +12,17 @@ struct HeldScreen: View {
     @State private var typeDescription = ""
     @State private var isShowSheet = false
     var body: some View {
-        VStack{
-            List(descriptionVM.events, id: \.id) {event in
-                EventCellView(title: event.title, description: event.description, createAt: event.createAt, isMyMessage: true, customDate: event.customDate)
+        ZStack{
+            Color.customBackgroundColor
+                .ignoresSafeArea()
+            VStack{
+                List(descriptionVM.events, id: \.id) {event in
+                        EventCellView(title: event.title, description: event.description, createAt: event.createAt, isMyMessage: true, customDate: event.customDate)
+                }
+                .background(Color.customBackgroundColor)
             }
+            EditButton(isShowSheet: $isShowSheet)
+                .offset(x: 130, y: 180)
         }
     }
 }
@@ -30,32 +37,30 @@ struct EventCellView: View {
 
     var body: some View {
         if isMyMessage && !title.isEmpty {
-            VStack {
+            ZStack {
                 VStack {
-                    Text(title)
-                        .font(.system(size: 23))
-                        .fontWeight(.bold)
-                        .padding(.all)
-                    Text(description)
-                    Spacer()
-                    HStack {
+                    VStack {
+                        Text(title)
+                            .font(.system(size: 23))
+                            .fontWeight(.bold)
+                            .padding(.all)
+                        Text(description)
                         Spacer()
-                        Text("投稿日時\(formattedDate(date: createAt))")
-                        Spacer()
-                        Text("開催日時\(formattedDate(date:customDate))")
-                        Spacer()
+                        HStack {
+                            Spacer()
+                            Text("開催日時\(formattedDate(date:customDate))")
+                            Spacer()
+                        }
                     }
+                    .frame(width: 330)//ここのheightを伸ばしたい
+                    .padding()
+                    .background(.white)
+                    .cornerRadius(8)
+                    .clipped()
+                    .shadow(color: .gray.opacity(0.7), radius: 5)
+                    Spacer()
                 }
-                .frame(width: 330)//ここのheightを伸ばしたい
-                .padding()
-                .background(.white)
-                .cornerRadius(8)
-                .clipped()
-                .shadow(color: .gray.opacity(0.7), radius: 5)
-                Spacer()
-
             }
-            .padding()
         }
     }
     func formattedDate(date: Date) -> String {
