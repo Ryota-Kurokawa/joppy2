@@ -54,20 +54,20 @@ struct UseCouponScreen: View {
                                 Text("クーポン発行")
                                     .fontWeight(.semibold)
                                     .foregroundColor(.white)
-                                    .frame(width: 170, height: 90)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .stroke(Color.white, lineWidth: 2)
-                                    )
                             }
-                            .frame(width: 100,height: 50)
-                            .background(Color.customRedColor)
-                            .cornerRadius(15.0)
+                            .frame(width: 120,height: 70)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(Color.white, lineWidth: 2)
+                            )
+                            .background(
+                                RoundedRectangle(cornerRadius: 15) // ここでRoundedRectangleを指定
+                                .fill(Color.customRedColor)
+                            )
                             .sheet(isPresented: $isPresented, content: {
                                 SendCoupon()
                             })
                             Spacer()
-                                .frame(width: 20)
                         }
                     }
                     Spacer()
