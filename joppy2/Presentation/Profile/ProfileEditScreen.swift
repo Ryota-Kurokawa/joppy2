@@ -35,9 +35,8 @@ struct ProfileEditScreen: View {
                     .font(.custom("AvenirNext-Heavy", size: 50))
                     .fontWeight(.bold)
                     .foregroundColor(Color.customBlackColor)
-                    .padding(.top,30)
+                    .padding(.top,-330)
                     .padding(.bottom, 10)
-                    .offset(x: 0, y: -330)
                 VStack {
                     VStack {
                         Text("name")
