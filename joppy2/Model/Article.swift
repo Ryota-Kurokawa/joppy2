@@ -7,10 +7,8 @@
 
 import Foundation
 
-struct Article: Identifiable {
-    let id: UUID
+struct Article: Codable {
     let title: String
-    let body: String
-    let publishedBy: String
-    let publishedAt: Date
+    let storeName: String
+    let content: String
 }

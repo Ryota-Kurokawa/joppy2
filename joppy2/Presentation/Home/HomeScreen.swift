@@ -16,7 +16,7 @@ struct HomeScreen: View {
                     Text("Event")
                         .foregroundColor(.white)
                 }
-            WriteArticleScreen()
+            ArticleScreen()
                 .tabItem {
                     Image(systemName: "book.fill")
                     Text("Article")

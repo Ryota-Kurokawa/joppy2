@@ -13,6 +13,7 @@ struct WriteArticleScreen: View {
     @State private var storeName = ""
     @State private var articleText = "**Thank you!** Please visit our [website](https://example.com)"
     @FocusState var isFocused: Bool
+    let controller = ArticleController()
     var body: some View {
         ZStack {
             Color.customBackgroundColor
@@ -25,12 +26,6 @@ struct WriteArticleScreen: View {
                 }
         ScrollView {
                 VStack {
-                    Text("Write Article")
-                        .font(.custom("AvenirNext-Heavy", size: 50))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.customBlackColor)
-                        .padding(.top, 30)
-                        .padding(.bottom, 10)
                     Text("Title")
                         .fontWeight(.semibold)
                         .font(.custom("Helvetica", size: 20))
@@ -70,6 +65,14 @@ struct WriteArticleScreen: View {
                             Spacer()
                             Button(action: {
                                 // ここに記事を投稿する処理を書く
+                                Task {
+                                    do {
+                                        try await controller.storeArticle(title: title, storeName: storeName, content: articleText)
+                                        isPresented.toggle()
+                                    } catch {
+                                        print("Couldn't parse: \(error)")
+                                    }
+                                }
                             }) {
                                 Text("投稿する")
                                     .fontWeight(.semibold)
@@ -80,7 +83,9 @@ struct WriteArticleScreen: View {
                                             .stroke(Color.white, lineWidth: 2)
                                     )
                             }
-                            
+                            .fullScreenCover(isPresented: $isPresented) {
+                                HomeScreen()
+                            }
                             .frame(width: 100,height: 50)
                             .background(Color.customRedColor)
                             .cornerRadius(15.0)
