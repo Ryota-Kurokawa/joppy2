@@ -51,22 +51,6 @@ struct EditView: View {
                     isFocused = false
                 }
             VStack {
-                Button (action:{
-                    DescriptionVM.addEvent(title: typeTitle, description: typeDescription, customDate: HeldDate)
-                    typeTitle = ""
-                    typeDescription = ""
-                    print("typeTitle after reset: \(typeTitle)")
-                    isShowSheet = false
-                }) {
-                    Text("投稿する")
-                        .fontWeight(.semibold)
-                        .font(.custom("Helvetica", size: 20))
-                        .padding()
-                        .foregroundColor(.white)
-                }
-                .frame(width: 140,height: 70)
-                .background(Color.customRedColor)
-                .cornerRadius(15.0)
                 DatePicker(
                     "日付と時刻を選択",
                     selection: $HeldDate,
@@ -85,7 +69,23 @@ struct EditView: View {
                         RoundedRectangle(cornerRadius: 5) // 角が丸い四角形をオーバーレイとして追加
                             .stroke(Color.gray, lineWidth: 1) // このオーバーレイに枠線を適用
                     )
-                    .padding(.bottom,20)
+                    .padding(.bottom,90)
+                Button (action:{
+                    DescriptionVM.addEvent(title: typeTitle, description: typeDescription, customDate: HeldDate)
+                    typeTitle = ""
+                    typeDescription = ""
+                    print("typeTitle after reset: \(typeTitle)")
+                    isShowSheet = false
+                }) {
+                    Text("投稿する")
+                        .fontWeight(.semibold)
+                        .font(.custom("Helvetica", size: 20))
+                        .padding()
+                        .foregroundColor(.white)
+                }
+                .frame(width: 140,height: 70)
+                .background(Color.customRedColor)
+                .cornerRadius(15.0)
             }
             .padding(.all)
         }
