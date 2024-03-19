@@ -34,7 +34,6 @@ struct EventScreen: View {
                         .padding(.top,30)
                     Picker("TextFieldStyle", selection: $eventFieldTypes) {
                         Text("参加したい！").tag(EventFieldTypes.toC)
-                        Text("開催したい！").tag(EventFieldTypes.toB)
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     Spacer()

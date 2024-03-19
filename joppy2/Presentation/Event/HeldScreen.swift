@@ -10,8 +10,6 @@
 //編集するページ
 import SwiftUI
 
-
-
 struct EditButton: View {
     @Binding var isShowSheet: Bool
     var body: some View {

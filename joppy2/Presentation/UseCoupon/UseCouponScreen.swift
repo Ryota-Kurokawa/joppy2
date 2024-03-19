@@ -29,18 +29,16 @@ struct UseCouponScreen: View {
                             NavigationLink(destination: DetailScreen(coupon: coupon)){
                                 VStack {
                                     HStack {
-                                        Text("Disscount Rate")
-                                        Spacer()
-                                        Text("\(coupon.disscountRate)円")
-                                    }
-                                    HStack {
-                                        Text("Message")
+                                        Text("メッセージ")
+                                            .foregroundColor(.gray)
                                         Spacer()
                                         Text(coupon.message)
                                     }
-                                    Text(coupon.id.uuidString)
-                                        .font(.caption)
-                                        .foregroundColor(.gray)
+                                    HStack {
+                                        Text("割引額")
+                                        Spacer()
+                                        Text("\(coupon.disscountRate)円")
+                                    }
                                 }
                             }
                         }
