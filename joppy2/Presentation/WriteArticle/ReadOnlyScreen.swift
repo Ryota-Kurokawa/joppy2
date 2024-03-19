@@ -1,17 +1,29 @@
-//
-//  ReadOnly.swift
-//  joppy2
-//
-//  Created by 黒川良太 on 2024/03/19.
-//
-
 import SwiftUI
 
+// ReadOnlyScreenの修正版
 struct ReadOnlyScreen: View {
-    
+    var articleModel = ArticleModel() // ArticleModelのインスタンスを作成
+
     var body: some View {
         VStack {
-            Text("This is a read only screen")
+            List(articleModel.article, id: \.id) { article in // ArticleElementのリストを表示
+                ArticleView(article: article)
+            }
         }
     }
 }
+
+// ArticleViewの修正版
+struct ArticleView: View {
+    let article: ArticleElement // ArticleElementを受け取る
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(article.title) // タイトルを表示
+                .font(.headline)
+            Text(changeMarkdownText(article.content)) // コンテンツを表示
+                .font(.body)
+        }
+    }
+}
+
