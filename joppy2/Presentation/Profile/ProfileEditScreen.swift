@@ -19,7 +19,7 @@ struct ProfileEditScreen: View {
     @FocusState var isFocused: Bool
     let db = Firestore.firestore()
     let controller = ProfileController()
-    
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -31,43 +31,38 @@ struct ProfileEditScreen: View {
                         // テキストフィールドからフォーカスを外す
                         isFocused = false
                     }
+                Text("User Edit")
+                    .font(.custom("AvenirNext-Heavy", size: 50))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.customBlackColor)
+                    .padding(.top,30)
+                    .padding(.bottom, 10)
+                    .offset(x: 0, y: -330)
                 VStack {
-                    Spacer()
-                        .frame(height: 100)
-                    Text("Joppy")
-                        .font(.custom("AvenirNext-Heavy", size: 60))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.customBlackColor)
-                    Spacer()
-                        .frame(height: 100)
-                    HStack {
+                    VStack {
                         Text("name")
                             .fontWeight(.semibold)
                             .font(.custom("Helvetica", size: 20))
                             .foregroundColor(Color.customBlackColor)
-                        Spacer()
+                            .padding(.leading, -170)
+                        TextField("type your displayed", text: $name)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.horizontal)
+                            .focused($isFocused)
                     }
-                    .padding(.horizontal)
-                    TextField("type your displayed", text: $name)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.horizontal)
-                        .focused($isFocused)
                     Spacer()
-                        .frame(height: 80)
-                    HStack {
+                    VStack {
                         Text("discription")
                             .fontWeight(.semibold)
                             .font(.custom("Helvetica", size: 20))
                             .foregroundColor(Color.customBlackColor)
-                        Spacer()
+                            .padding(.leading, -180)
+                        TextField("About You", text: $discription)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.horizontal)
+                            .focused($isFocused)
                     }
-                    .padding(.horizontal)
-                    TextField("About You", text: $discription)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.horizontal)
-                        .focused($isFocused)
                     Spacer()
-                        .frame(height: 80)
                     Button(action: {
                         Task {
                             if controller.updateProfile(userInfo: UserInfo(id: user.uid, name: name, userId: userId, discription: discription)) {
@@ -92,7 +87,10 @@ struct ProfileEditScreen: View {
                     .alert(isPresented: $isShowAlert) {
                         Alert(title: Text("Error"), message: Text("Failed to create profile"), dismissButton: .default(Text("OK")))
                     }
+                    Spacer()
+                    Spacer()
                 }
+                .offset(x: 0, y: 130)
             }
         }.onAppear {
             Task {

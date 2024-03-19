@@ -12,53 +12,83 @@ struct WriteArticleScreen: View {
     @State private var title = ""
     @State private var storeName = ""
     @State private var articleText = "**Thank you!** Please visit our [website](https://example.com)"
+    @FocusState var isFocused: Bool
     var body: some View {
-        VStack {
-            Text("Write Article")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Spacer()
-                .frame(height: 80)
-            Text("Title")
-            TextField("Title", text: $title)
-                .padding()
-            Spacer()
-                .frame(height: 40)
-            Text("Store Name")
-            TextField("禁断の扉", text: $storeName)
-                .padding()
-            Spacer()
-                .frame(height: 40)
-            HStack {
-                Spacer()
-                    .frame(width: 20)
-                Text("Content")
-                Spacer()
-            }
-            TextEditor(text: $articleText)
-                .frame(height: 100)
-                .cornerRadius(10)
-                .border(Color.gray.opacity(0.5), width: 1)
-                .padding()
-            Text(changeMarkdownText(articleText))
-                .frame(height: 100)
-                .frame(width: 360)
-                .border(Color.gray.opacity(0.5), width: 1)
-            ZStack {
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        // ここに記事を投稿する処理を書く
-                        
-                    }) {
-                        Image(systemName: "paperplane")
+        ZStack {
+            Color.customBackgroundColor
+                .ignoresSafeArea()
+            Color.clear
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    // テキストフィールドからフォーカスを外す
+                    isFocused = false
+                }
+        ScrollView {
+                VStack {
+                    Text("Write Article")
+                        .font(.custom("AvenirNext-Heavy", size: 50))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.customBlackColor)
+                        .padding(.top, 30)
+                        .padding(.bottom, 10)
+                    Text("Title")
+                        .fontWeight(.semibold)
+                        .font(.custom("Helvetica", size: 20))
+                        .foregroundColor(Color.customBlackColor)
+                        .padding(.leading, -170)
+                    TextField("Title", text: $title)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal)
+                        .focused($isFocused)
+                    Text("Store Name")
+                        .fontWeight(.semibold)
+                        .font(.custom("Helvetica", size: 20))
+                        .foregroundColor(Color.customBlackColor)
+                        .padding(.leading, -170)
+                    TextField("禁断の扉", text: $storeName)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal)
+                        .focused($isFocused)
+                    VStack {
+                        Text("Content")
+                            .fontWeight(.semibold)
+                            .font(.custom("Helvetica", size: 20))
+                            .foregroundColor(Color.customBlackColor)
+                            .padding(.leading, -170)
+                        TextEditor(text: $articleText)
+                            .frame(width: 360, height: 200)
+                            .cornerRadius(10)
+                            .focused($isFocused)
+                        Text(changeMarkdownText(articleText))
+                            .frame(width: 360, height: 100)
+                            .background(.white)
+                            .cornerRadius(10)
                     }
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                    .padding(.top,20)
+                    ZStack {
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                // ここに記事を投稿する処理を書く
+                            }) {
+                                Text("投稿する")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                                    .frame(width: 100, height: 50)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.white, lineWidth: 2)
+                                    )
+                            }
+                            
+                            .frame(width: 100,height: 50)
+                            .background(Color.customRedColor)
+                            .cornerRadius(15.0)
+                            Spacer()
+                                .frame(width: 20)
+                        }
+                    }
                     Spacer()
-                        .frame(width: 20)
                 }
             }
         }

@@ -10,12 +10,11 @@ import SwiftUI
 struct OrganizationScreen: View {
     var body: some View {
         VStack {
-            Text("Organizaion")
-                .font(.largeTitle)
-                .fontWeight(.bold)
             Spacer()
             Text("Comming Soon")
-                .font(.title)
+                .font(.custom("AvenirNext-Heavy", size: 40))
+                .fontWeight(.semibold)
+                .foregroundColor(Color.customBlackColor)
             Spacer()
         }
     }

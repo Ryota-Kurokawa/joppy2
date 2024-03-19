@@ -26,12 +26,13 @@ struct ProfileScreen: View {
                 Color.customBackgroundColor
                     .ignoresSafeArea()
                 VStack {
-                    Text("Joppy")
-                        .font(.largeTitle)
+                    Text("Profile")
+                        .font(.custom("AvenirNext-Heavy", size: 50))
                         .fontWeight(.bold)
-                        .padding(.vertical, 40)
+                        .foregroundColor(Color.customBlackColor)
+                        .padding(.top,30)
                     Picker("TextFieldStyle", selection: $profileFieldTypes) {
-                        Text("個人").tag(ProfileFieldTypes.individual)
+                        Text("Personal").tag(ProfileFieldTypes.individual)
                         Text("organization").tag(ProfileFieldTypes.organization)
                     }
                     .pickerStyle(SegmentedPickerStyle())

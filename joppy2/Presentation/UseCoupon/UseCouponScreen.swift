@@ -15,49 +15,62 @@ struct UseCouponScreen: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Coupon")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                List {
-                    ForEach(couponList) { coupon in
-                        NavigationLink(destination: DetailScreen(coupon: coupon)){
-                            VStack {
-                                HStack {
-                                    Text("Disscount Rate")
-                                    Spacer()
-                                    Text("\(coupon.disscountRate)円")
+            ZStack {
+                Color.customBackgroundColor // ここを修正
+                    .ignoresSafeArea()
+                VStack {
+                    Text("Coupon")
+                        .font(.custom("AvenirNext-Heavy", size: 50))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.customBlackColor)
+                        .padding(.top,30)
+                    List {
+                        ForEach(couponList) { coupon in
+                            NavigationLink(destination: DetailScreen(coupon: coupon)){
+                                VStack {
+                                    HStack {
+                                        Text("Disscount Rate")
+                                        Spacer()
+                                        Text("\(coupon.disscountRate)円")
+                                    }
+                                    HStack {
+                                        Text("Message")
+                                        Spacer()
+                                        Text(coupon.message)
+                                    }
+                                    Text(coupon.id.uuidString)
+                                        .font(.caption)
+                                        .foregroundColor(.gray)
                                 }
-                                HStack {
-                                    Text("Message")
-                                    Spacer()
-                                    Text(coupon.message)
-                                }
-                                Text(coupon.id.uuidString)
-                                    .font(.caption)
-                                    .foregroundColor(.gray)
                             }
                         }
                     }
-                }
-                ZStack {
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            isPresented.toggle()
-                        }) {
-                            Image(systemName: "paperplane")
+                    ZStack {
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                isPresented.toggle()
+                            }) {
+                                Text("クーポン発行")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                                    .frame(width: 170, height: 90)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.white, lineWidth: 2)
+                                    )
+                            }
+                            .frame(width: 100,height: 50)
+                            .background(Color.customRedColor)
+                            .cornerRadius(15.0)
+                            .sheet(isPresented: $isPresented, content: {
+                                SendCoupon()
+                            })
+                            Spacer()
+                                .frame(width: 20)
                         }
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .sheet(isPresented: $isPresented, content: {
-                            SendCoupon()
-                        })
-                        Spacer()
-                            .frame(width: 20)
                     }
+                    Spacer()
                 }
             }
         }
