@@ -1,0 +1,41 @@
+.
+├── joppy2
+│   ├── Model
+│   │   ├── Article.swift
+│   │   ├── Coupon.swift
+│   │   ├── Publisher.swift
+│   │   └── UserInfo.swift
+│   ├── Presentation
+│   │   ├── Event
+│   │   ├── Home
+│   │   │   └── HomeScreen.swift
+│   │   ├── Login
+│   │   │   ├── LoginController.swift
+│   │   │   └── LoginScreen.swift
+│   │   ├── Profile
+│   │   │   ├── OrganizationScreen.swift
+│   │   │   ├── PersonalScreen.swift
+│   │   │   ├── ProfileController.swift
+│   │   │   ├── ProfileCreateScreen.swift
+│   │   │   ├── ProfileEditScreen.swift
+│   │   │   └── ProfileScreen.swift
+│   │   ├── SignUp
+│   │   │   ├── SignUpController.swift
+│   │   │   └── SignUpScreen.swift
+│   │   ├── UseCoupon
+│   │   │   ├── CouponController.swift
+│   │   │   ├── DetailScreen.swift
+│   │   │   ├── SendCoupon.swift
+│   │   │   └── UseCouponScreen.swift
+│   │   └── WriteArticle
+│   │       ├── ArticleController.swift
+│   │       ├── ArticleScreen.swift
+│   │       ├── ReadController.swift
+│   │       ├── ReadEllement.swift
+│   │       ├── ReadOnlyScreen.swift
+│   │       └── WriteArticleScreen.swift
+│   ├── ViewModel
+│   │   ├── AuthProtocol.swift
+│   │   └── AuthViewModel.swift
+│   └── joppy2App.swift
+├── project.yml
